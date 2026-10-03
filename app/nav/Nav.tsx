@@ -1,7 +1,10 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router";
+import { Link, NavLink } from "react-router";
+
+const navLinkClassName = ({ isActive }: { isActive: boolean }) =>
+  `nav-link${isActive ? " nav-link-active" : ""}`;
 
 export default function Nav() {
   const [open, setOpen] = useState(false);
@@ -26,18 +29,18 @@ export default function Nav() {
           </Link>
 
           <nav className="hidden md:flex items-center gap-4 ml-6">
-            <Link to="/" className="nav-link" onClick={() => setOpen(false)}>
+            <NavLink to="/" className={navLinkClassName} onClick={() => setOpen(false)}>
               Home
-            </Link>
-            <Link to="/mechanics" className="nav-link" onClick={() => setOpen(false)}>
+            </NavLink>
+            <NavLink to="/mechanics" className={navLinkClassName} onClick={() => setOpen(false)}>
               Mechanics
-            </Link>
-            <Link to="/character-creation" className="nav-link" onClick={() => setOpen(false)}>
+            </NavLink>
+            <NavLink to="/character-creation" className={navLinkClassName} onClick={() => setOpen(false)}>
               Character Creation
-            </Link>
-            <Link to="/resources" className="nav-link" onClick={() => setOpen(false)}>
+            </NavLink>
+            <NavLink to="/resources" className={navLinkClassName} onClick={() => setOpen(false)}>
               Resources
-            </Link>
+            </NavLink>
           </nav>
         </div>
 
@@ -47,18 +50,18 @@ export default function Nav() {
       {open && (
         <nav className="md:hidden bg-transparent border-t">
           <div className="px-4 pb-4 space-y-2">
-            <Link to="/" className="block nav-link" onClick={() => setOpen(false)}>
+            <NavLink to="/" className={({ isActive }) => `block ${navLinkClassName({ isActive })}`} onClick={() => setOpen(false)}>
               Home
-            </Link>
-            <Link to="/mechanics" className="block nav-link" onClick={() => setOpen(false)}>
+            </NavLink>
+            <NavLink to="/mechanics" className={({ isActive }) => `block ${navLinkClassName({ isActive })}`} onClick={() => setOpen(false)}>
               Mechanics
-            </Link>
-            <Link to="/character-creation" className="block nav-link" onClick={() => setOpen(false)}>
+            </NavLink>
+            <NavLink to="/character-creation" className={({ isActive }) => `block ${navLinkClassName({ isActive })}`} onClick={() => setOpen(false)}>
               Character Creation
-            </Link>
-            <Link to="/resources" className="block nav-link" onClick={() => setOpen(false)}>
+            </NavLink>
+            <NavLink to="/resources" className={({ isActive }) => `block ${navLinkClassName({ isActive })}`} onClick={() => setOpen(false)}>
               Resources
-            </Link>
+            </NavLink>
           </div>
         </nav>
       )}
