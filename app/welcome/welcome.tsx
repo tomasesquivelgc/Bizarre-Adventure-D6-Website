@@ -3,30 +3,62 @@ import logoLight from "./logo-light.svg";
 
 export function Welcome() {
   return (
-    <main className="flex items-center justify-center pt-16 pb-4">
-      <div className="flex-1 flex flex-col items-center gap-16 min-h-0">
-        <div className="max-w-[300px] w-full space-y-6 px-4">
-          <nav className="rounded-3xl border border-gray-200 p-6 dark:border-gray-700 space-y-4">
-            <p className="leading-6 text-gray-700 dark:text-gray-200 text-center">
-              What&apos;s next?
-            </p>
-            <ul>
-              {resources.map(({ href, text, icon }) => (
-                <li key={href}>
-                  <a
-                    className="group flex items-center gap-3 self-stretch p-3 leading-normal text-blue-700 hover:underline dark:text-blue-500"
-                    href={href}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    {icon}
-                    {text}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </nav>
-        </div>
+    <main className="flex flex-col items-center justify-center pt-16 pb-4">
+      <h1 className="text-2xl">「Bizarre Adventures D6」</h1>
+      <p>v0.9</p>
+      <h2 className="text-lg">
+        What Is This?
+      </h2>
+      <div className="flex max-w-1/2 min-w-1/2 gap-2">
+        <p>
+          A Tabletop RPG System, made with the intention of emulating <span className="text-decoration-line: underline">JoJo's Bizarre Adventure,</span> a popular Manga and Anime series.
+          <br />
+          <br />
+          The <span className="text-decoration-line: underline">Players</span> create characters (PCs) to play as, and lead the story. They are the active movers and decision-makers of the game, as a group of 3-6 people.
+          <br />
+          The <span className="text-decoration-line: underline">Narrator</span> (GM) controls the flow of the world and NPCs. They are the final arbiter of any rulings made at their table, this rulebook is only a guideline.
+          <br />
+          <br />
+          The core conceit of JJBA is the Stand User, one wielding a manifestation of their soul.
+          <br />
+          Every Stand has a unique <span className="text-decoration-line: underline">Ability</span>, <span className="text-decoration-line: underline">Typing</span>, & <span className="text-decoration-line: underline">Properties</span>.
+          <br />
+          <br />
+          Stands & Users share damage and senses. If one is hurt, so is the other.
+          <br />
+          Stands can only be seen or harmed by other Stand Users.
+          <br />
+          Stands are selectively intangible.
+          <br />
+          Stands are strongest when close to the User.
+          <br />
+          <span className="text-decoration-line: underline">Exceptions</span> to these rules are common.
+          <br />
+          Certain non-Stand Users may be able to see or hurt Stands, by Narrator decision.
+          <br />
+          <br />
+          For the detailed rules on Stands, <a href="https://mangadex.org/chapter/24555/2" className="text-decoration-line: underline">read this chapter</a>.
+          Text is read from right to left, as opposed to a typical book's left to right.
+          The television adaptation can be viewed on Crunchyroll <a href="http://www.crunchyroll.com/jojos-bizarre-adventure" className="text-decoration-line: underline">here</a>, or pirated on nyaa.si
+        </p>
+      </div>
+      <h2 className="text-lg pt-10">Needed Materials</h2>
+      <div className="flex max-w-1/2 min-w-1/2 gap-2">
+      <p>
+        A handful of six-sided dice (D6) to roll when needed.
+        <br />
+        A pencil + paper to write down stats and make maps.
+        <br />
+        Alternatively, a paid account on Roll20 or Foundry VTT for online play.
+        <br />
+        <br />
+        BAD6 Discord now operational.
+        <br />
+        Changelog here, and v.0.75b can be found here.
+        <br />
+        Roll20 & Foundry content can be found in Additional Links.
+
+      </p>
       </div>
     </main>
   );
