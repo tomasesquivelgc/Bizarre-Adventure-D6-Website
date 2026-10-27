@@ -14,6 +14,19 @@ export default function CharacterCreation() {
         sollicitudin urna arcu eget justo. Maecenas non lacus at velit
         tincidunt efficitur.
       </p>
+      <h2 className="text-xl font-medium mb-2">Point buy tiers</h2>
+      <h2 className="text-xl font-medium mb-2">Bios</h2>
+      <h2 className="text-xl font-medium mb-2">User Stats</h2>
+      <h2 className="text-xl font-medium mb-2">Stand Stats</h2>
+      <h2 className="text-xl font-medium mb-2">Rank Burns</h2>
+      <h2 className="text-xl font-medium mb-2">Range/Learning Ranks</h2>
+      <h2 className="text-xl font-medium mb-2">Properties</h2>
+      <h2 className="text-xl font-medium mb-2">Abilities</h2>
+      <h2 className="text-xl font-medium mb-2">Stand Types</h2>
+      <h2 className="text-xl font-medium mb-2">「Alternative Character Options」</h2>
+      <h2 className="text-xl font-medium mb-2">「Alternative User Types」</h2>
+      <h2 className="text-xl font-medium mb-2">「Alternative Power sources」</h2>
+      <h2 className="text-xl font-medium mb-2">Alternative Source Range Stats</h2>
     </main>
   );
 }
