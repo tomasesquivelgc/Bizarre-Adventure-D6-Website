@@ -6,9 +6,39 @@ export function meta({}: Route.MetaArgs) {
 
 export default function CharacterCreation() {
   return (
-    <main className="pt-16 p-4 container mx-auto">
-      <h1 className="text-2xl font-semibold mb-4">Character Creation</h1>
-      <p>
+    <main id="character-content" className="character-content pt-16 px-4 pb-16">
+      <div className="mx-auto max-w-7xl">
+        <header className="character-header">
+          <p className="eyebrow">Player guide</p>
+          <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl">Character Creation</h1>
+          <p className="character-lede">
+            Build a User, Stand, or alternative character source by choosing stats, abilities, and properties within
+            your setting&apos;s point-buy budget.
+          </p>
+        </header>
+
+        <div className="character-layout">
+          <aside className="character-toc" aria-label="Character creation sections">
+            <p className="character-toc-title">On this page</p>
+            <nav>
+              <a href="#point-buy-tiers">Point buy tiers</a>
+              <a href="#bios">Bios</a>
+              <a href="#user-stats">User Stats</a>
+              <a href="#stand-stats">Stand Stats</a>
+              <a href="#rank-burns">Rank Burns</a>
+              <a href="#range-learning-ranks">Range/Learning Ranks</a>
+              <a href="#properties">Properties</a>
+              <a href="#abilities">Abilities</a>
+              <a href="#stand-types">Stand Types</a>
+              <a href="#alternative-character-options">Alternative Character Options</a>
+              <a href="#alternative-user-types">Alternative User Types</a>
+              <a href="#alternative-power-sources">Alternative Power Sources</a>
+              <a href="#alternative-source-range-stats">Alternative Source Range Stats</a>
+            </nav>
+          </aside>
+
+          <div className="character-prose">
+      <p className="character-intro">
         Stats determine the dice pool for their uses, and are different for Users and Stands.
         Each Stat has a rank from E to A, with niche instances of Ø (Always Failure), ∞ (10d6), and S (Special/Other, is not an A+)
 
@@ -22,19 +52,19 @@ export default function CharacterCreation() {
         1-2 points can be moved from one pool to the other.
         Some settings invert them, using the large pool for Users and small pool for Stands.
       </p>
-      <h2 className="text-xl font-medium mb-2">Point buy tiers</h2>
-      <p>
-        Sad: 12/12
-        Minion: 15/18
-        Low: 17/20
-        Medium-Low: 19/23
-        Medium: 21/25
-        Medium-High: 22/27
-        High: 23/30
-        Fabulous: 24/32
-        Over Heaven: 26/40
-      </p>
-      <h2 className="text-xl font-medium mb-2">Bios</h2>
+      <h2 id="point-buy-tiers" className="character-section-title text-xl font-medium">Point buy tiers</h2>
+      <ul className="character-data-list" aria-label="Point buy tiers">
+        <li><span>Sad</span><strong>12 / 12</strong></li>
+        <li><span>Minion</span><strong>15 / 18</strong></li>
+        <li><span>Low</span><strong>17 / 20</strong></li>
+        <li><span>Medium-Low</span><strong>19 / 23</strong></li>
+        <li><span>Medium</span><strong>21 / 25</strong></li>
+        <li><span>Medium-High</span><strong>22 / 27</strong></li>
+        <li><span>High</span><strong>23 / 30</strong></li>
+        <li><span>Fabulous</span><strong>24 / 32</strong></li>
+        <li><span>Over Heaven</span><strong>26 / 40</strong></li>
+      </ul>
+      <h2 id="bios" className="character-section-title text-xl font-medium">Bios</h2>
       <p>
         Every character has personality traits, history, and a philosophy.
         The Moxie Advantage focuses on this section for its references.
@@ -44,14 +74,14 @@ export default function CharacterCreation() {
         A more detailed Bio will have more chances to justify the Advantage.
         The Bio grows with the character themselves, as events unfold...
       </p>
-      <h2 className="text-xl font-medium mb-2">User Stats</h2>
-      <p>
-        E:  1d6 Dice (1 Point) - Very weak, possibly handicapped.
-        D: 2d6 Dice (2 Points) - Substandard, lacking in that area.
-        C: 3d6 Dice (3 Points - Healthy, but nothing spectacular.
-        B: 4d6 Dice (4 Points) - Adept, and it shows.
-        A: 5d6 Dice (5 Points) - Talented, in a league of their own.
-      </p>
+      <h2 id="user-stats" className="character-section-title text-xl font-medium">User Stats</h2>
+      <ul className="character-data-list character-stat-list" aria-label="User stat ranks">
+        <li><span>E</span><strong>1d6 · 1 point</strong><span>Very weak, possibly handicapped.</span></li>
+        <li><span>D</span><strong>2d6 · 2 points</strong><span>Substandard, lacking in that area.</span></li>
+        <li><span>C</span><strong>3d6 · 3 points</strong><span>Healthy, but nothing spectacular.</span></li>
+        <li><span>B</span><strong>4d6 · 4 points</strong><span>Adept, and it shows.</span></li>
+        <li><span>A</span><strong>5d6 · 5 points</strong><span>Talented, in a league of their own.</span></li>
+      </ul>
       <ul>
         <li>
           Body - Physical fitness. Stamina, strength, & control.
@@ -84,7 +114,7 @@ export default function CharacterCreation() {
           Low Luck - Danny, Masazo, Doppio
         </li>
       </ul>
-      <h2 className="text-xl font-medium mb-2">Stand Stats</h2>
+      <h2 id="stand-stats" className="character-section-title text-xl font-medium">Stand Stats</h2>
       <div>
         <ul>
           <li>
@@ -150,7 +180,7 @@ export default function CharacterCreation() {
           Ø/E/D/C/B/A/∞ = 0/1/2/3/4/5/15 Ranks.
         </p>
       </div>
-      <h2 className="text-xl font-medium mb-2">Rank Burns</h2>
+      <h2 id="rank-burns" className="character-section-title text-xl font-medium">Rank Burns</h2>
       <p>
         The Luck & Learning Ranks are a consumable resource for boons.
         Luck burns are usually temporary, restored after the session ends.
@@ -191,7 +221,7 @@ export default function CharacterCreation() {
         Adaptive ___ (-X+2 Temp) - Any of the above, but it goes away after the session ends.
         Stand Users only. An Adaptive Invention would cost 5 Temp instead of 3 Permanent.
       </p>
-      <h2 className="text-xl font-medium mb-2">Range/Learning Ranks</h2>
+      <h2 id="range-learning-ranks" className="character-section-title text-xl font-medium">Range/Learning Ranks</h2>
       <ul>
         <li>E: 1 Rank ~ 2 Meters or below</li>
         <li>D: 2 Ranks ~ 6M</li>
@@ -203,7 +233,7 @@ export default function CharacterCreation() {
             Tiles are 2 meters each. 10 meters = 5 Tiles, while Movement is ~8-12 Tiles.
         </li>
       </ul>
-      <h2 className="text-xl font-medium mb-2">Properties</h2>
+      <h2 id="properties" className="character-section-title text-xl font-medium">Properties</h2>
       <p>
         Some Stands have unique physiologies or affinities, neither ability nor type. 
         These Properties open the door to otherwise unrealistic actions.
@@ -219,7 +249,7 @@ export default function CharacterCreation() {
         e.g. Justice's fog form, Hierophant Green's barriers.
 
       </p>
-      <h2 className="text-xl font-medium mb-2">Abilities</h2>
+      <h2 id="abilities" className="character-section-title text-xl font-medium">Abilities</h2>
       <p>
         Stands have a unique Ability, which bends reality to its will.
         An ideal Ability is esoteric, being very versatile or hyperspecific.
@@ -280,7 +310,7 @@ export default function CharacterCreation() {
           e.g. MiH's ability, GER's ability, TWOH's ability.
         </li>
       </ul>
-      <h2 className="text-xl font-medium mb-2">Stand Types</h2>
+      <h2 id="stand-types" className="character-section-title text-xl font-medium">Stand Types</h2>
       <p>
         Stands fall into a mix of these archetypes.
       </p>
@@ -421,7 +451,7 @@ export default function CharacterCreation() {
           </p>
         </li>
       </ul>
-      <h2 className="text-xl font-medium mb-2">「Alternative Character Options」</h2>
+      <h2 id="alternative-character-options" className="character-section-title text-xl font-medium">「Alternative Character Options」</h2>
       <p>
         Rather than a Stand, you have another boon to fight on-par with Stand Users. 
         The Source uses the same Stats as Stands, and a Special Ability priced the same way.
@@ -436,7 +466,8 @@ export default function CharacterCreation() {
         Alternative User Types are Freak, Alien, Ghost, Rock Human, & Pillar Man.
         Alternative Sources are Hamon, Vampire, Spin, Armed Phenomenon, & Cyborg.
       </p>
-      <h2 className="text-xl font-medium mb-2">「Alternative User Types」</h2>
+      <h2 id="alternative-user-types" className="character-section-title text-xl font-medium">「Alternative User Types」</h2>
+      <ul>
       <li>
         <h3>Freak 😛</h3>
         <p>
@@ -452,17 +483,17 @@ export default function CharacterCreation() {
           A spirit of the dead, tied to the mortal world by an unfulfilled purpose.
           They typically keep whatever injury caused their death as a mark.
           Ghosts must follow certain Rules.
-          <ul>
-            <li>Ghosts are on the same level of selective intangibility as Stands.</li>
-            <li>Animals and Stand Users can see Ghosts.</li>
-            <li>Ghosts cannot be seen by normal people, but can make themselves heard.</li>
-            <li>If a Ghost's limb unwillingly touches a living thing, it is severed but not lost.</li>
-            <li>Normal objects may be manipulated as normal, but not felt by the ghost.</li>
-            <li>When any object is destroyed, its previous form becomes a Ghost Object.</li>
-            <li>Ghost Objects can be used by Ghosts, and only affect other non-living spirits.</li>
-            <li>Ghosts may only enter a room if let inside, or it is empty.</li>
-          </ul>
         </p>
+        <ul>
+          <li>Ghosts are on the same level of selective intangibility as Stands.</li>
+          <li>Animals and Stand Users can see Ghosts.</li>
+          <li>Ghosts cannot be seen by normal people, but can make themselves heard.</li>
+          <li>If a Ghost's limb unwillingly touches a living thing, it is severed but not lost.</li>
+          <li>Normal objects may be manipulated as normal, but not felt by the ghost.</li>
+          <li>When any object is destroyed, its previous form becomes a Ghost Object.</li>
+          <li>Ghost Objects can be used by Ghosts, and only affect other non-living spirits.</li>
+          <li>Ghosts may only enter a room if let inside, or it is empty.</li>
+        </ul>
       </li>
       <li>
         <h3>Alien 🛸</h3>
@@ -512,7 +543,8 @@ export default function CharacterCreation() {
           Vampirification - Creates Vampires with Learning, all Abilities, and (Ranks * 5) Points.
         </p>
       </li>
-      <h2 className="text-xl font-medium mb-2">「Alternative Power sources」</h2>
+      </ul>
+      <h2 id="alternative-power-sources" className="character-section-title text-xl font-medium">「Alternative Power sources」</h2>
       <h3>Hamon Warrior 🌊</h3>
       <p>
         An ancient breathing technique, Hamon is drawn from the User's vital energy. 
@@ -703,7 +735,7 @@ export default function CharacterCreation() {
         Range = How advanced the Cyborg's Experimental Upgrades are.
         Learning = Resources. How quickly a Cyborg can surpass their limits.
       </p>
-      <h2 className="text-xl font-medium mb-2">Alternative Source Range Stats</h2>
+      <h2 id="alternative-source-range-stats" className="character-section-title text-xl font-medium">Alternative Source Range Stats</h2>
       <ul>
         <li>
           <h3>Hamon</h3>
@@ -801,6 +833,9 @@ This is the point value any given Experimental Upgrade can start at.
           </ul>
         </li>
       </ul>
+          </div>
+        </div>
+      </div>
     </main>
   );
 }
