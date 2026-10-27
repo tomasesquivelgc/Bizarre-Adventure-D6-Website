@@ -395,7 +395,7 @@ export default function CharacterCreation() {
             If it is a 2-Act Stand, Acts 1 & 2 each have 3/4ths the base point pool, rounded down.
             For a 3-Act Stand, each of the Acts has 2/3rds, rounded down.
             Learning & Ability are paid for after the deduction. 
-            Learning is priced at the new Act’s grade, and can’t be increased.
+            Learning is priced at the new Act's grade, and can't be increased.
 
             e.g. Act 1 has a B Learning and Act 2 burns to a D, both have [3P] Abilities, 21 base PB.
             At a pool of (21P * 3/4) = 15P, Act 1 has (15P - [4P (B Learning) + 3P (Ability)] = 8P left.
@@ -707,7 +707,7 @@ export default function CharacterCreation() {
       <ul>
         <li>
           <h3>Hamon</h3>
-          <p>Range sets the limits of the Hamon Warrior’s conduction.
+          <p>Range sets the limits of the Hamon Warrior's conduction.
 This affects what mediums can hold a charge of their Hamon, not just stop or pass.
 Matter above Rank C also requires a specialized Overdrive to be used as a medium.
 Regular Hamon cannot interact with B/A/∞ Ranked materials.
@@ -762,7 +762,7 @@ Low-power high-range Devices could be a single needle escaping a black hole.
             <li>Ø: Can only be self-maintained in a vacuum.</li>
             <li>E: Benign barriers (normal atmospheric pressure, lunar pull, humidity)</li>
             <li>D: External variables (Loud winds, small impacts, own weight)</li>
-            <li>C: Environmental barriers (Planet’s gravity, deep sea pressure, terminal velocity limits)</li>
+            <li>C: Environmental barriers (Planet's gravity, deep sea pressure, terminal velocity limits)</li>
             <li>B: Molecular variables (Hardness, chemical bonds, melting point, electromagnetism)</li>
             <li>A: Universal barriers (Event horizons, thermodynamics, fundamental forces)</li>
             <li>∞: Metaphysical forces (Space, time, dimensions, fate)</li>
@@ -795,7 +795,7 @@ This is the point value any given Experimental Upgrade can start at.
             <li>E: Junk (-1 Point, actively a detriment to the Cyborg.)</li>
             <li>D: Bootleg (0 Points, has a major trade-off.)</li>
             <li>C: Aftermarket (1 Point, serves a basic function well.)</li>
-            <li>B: State-Of-The-Art (2 Points, can do something normal technology can’t.)</li>
+            <li>B: State-Of-The-Art (2 Points, can do something normal technology can't.)</li>
             <li>A: Black Market (3 Points, top of the line performance or versatility.)</li>
             <li>∞: Bleeding Edge (4 Points. Upgrades can be worth up to 5 Points.)</li>
           </ul>
