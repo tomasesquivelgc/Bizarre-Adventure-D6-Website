@@ -226,3 +226,136 @@ body {
     grid-column: 2;
   }
 }
+
+.resources-content {
+  line-height: 1.7;
+}
+
+.resources-header {
+  border-bottom: 1px solid color-mix(in srgb, var(--fg) 18%, transparent);
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+}
+
+.resource-examples {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.resource-card,
+.resource-link-group {
+  background: color-mix(in srgb, var(--bg-lt) 58%, transparent);
+  border: 1px solid color-mix(in srgb, var(--fg) 14%, transparent);
+  border-radius: 0.875rem;
+}
+
+.resource-card {
+  min-width: 0;
+  overflow: hidden;
+}
+
+.resource-card > h2,
+.resource-links > h2 {
+  font-size: 1.25rem;
+  font-weight: 650;
+  letter-spacing: -0.01em;
+}
+
+.resource-card > h2 {
+  background: color-mix(in srgb, var(--bg-hl) 55%, transparent);
+  border-bottom: 1px solid color-mix(in srgb, var(--fg) 12%, transparent);
+  margin: 0;
+  padding: 1rem 1.25rem;
+}
+
+.resource-card-body {
+  padding: 1.25rem;
+}
+
+.resources-content h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 1.5rem 0 0.5rem;
+}
+
+.resource-card-body h3:first-child,
+.resource-link-group h3 {
+  margin-top: 0;
+}
+
+.resources-content p {
+  margin-bottom: 1.25rem;
+  white-space: pre-line;
+}
+
+.resources-content ul {
+  display: grid;
+  gap: 0.5rem;
+  margin: 0 0 1.5rem;
+  padding-left: 1.25rem;
+}
+
+.resources-content li::marker {
+  color: var(--brand);
+}
+
+.resources-content a {
+  color: var(--fg);
+  font-weight: 650;
+  text-decoration-thickness: 0.1em;
+  text-underline-offset: 0.18em;
+}
+
+.resources-content a:hover,
+.resources-content a:focus-visible {
+  background: color-mix(in srgb, var(--bg-hl) 72%, transparent);
+  color: var(--fg);
+  outline: 2px solid color-mix(in srgb, var(--fg) 45%, transparent);
+  outline-offset: 2px;
+}
+
+.resource-card-body > a {
+  display: inline-block;
+  margin-top: -0.5rem;
+}
+
+.resource-links {
+  margin-top: 3rem;
+  scroll-margin-top: 1rem;
+}
+
+.resource-links > h2 {
+  border-top: 1px solid color-mix(in srgb, var(--fg) 18%, transparent);
+  padding-top: 1rem;
+}
+
+.resource-link-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.resource-link-group {
+  padding: 1.25rem;
+}
+
+.resource-link-group ul {
+  margin-bottom: 0;
+}
+
+.resource-link-group p {
+  margin: 0.25rem 0;
+}
+
+@media (max-width: 767px) {
+  .resource-examples,
+  .resource-link-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .resource-card-body,
+  .resource-link-group {
+    padding: 1rem;
+  }
+}
