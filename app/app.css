@@ -11,10 +11,10 @@ body {
   /* define site color variables here — edit/add hex values as needed */
   --brand: #6b9edf; /* primary accent */
   --muted: #6b7280;
-  --bg: #cc72c3; /* page background */
+  --bg: #E3B6DF; /* page background */
   --bg-dk: #b140a6;
   --bg-lt: #e0aadb;
-  --bg-hl: #bd84ff; /* highlight background */
+  --bg-hl: #D9B8FF; /* highlight background */
   --fg: #000000; /* page foreground/text */
 
   background-color: var(--bg);

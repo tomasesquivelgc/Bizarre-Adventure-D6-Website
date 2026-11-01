@@ -1,10 +1,7 @@
-import logoDark from "./logo-dark.svg";
-import logoLight from "./logo-light.svg";
-
 export function Welcome() {
   return (
     <main className="flex flex-col items-center justify-center pt-16 pb-4">
-      <h1 className="text-2xl">「Bizarre Adventures D6」</h1>
+      <h1 className="text-2xl">Bizarre Adventures D6</h1>
       <p>v0.9</p>
       <h2 className="text-lg">
         What Is This?
