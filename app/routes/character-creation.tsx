@@ -6,20 +6,23 @@ export function meta({}: Route.MetaArgs) {
 
 export default function CharacterCreation() {
   return (
-    <main id="character-content" className="character-content pt-16 px-4 pb-16">
+    <main id="character-content" className="px-4 pb-16 pt-16 leading-[1.7]">
       <div className="mx-auto max-w-7xl">
-        <header className="character-header">
-          <p className="eyebrow">Player guide</p>
+        <header className="mb-8 max-w-3xl">
+          <p className="text-xs font-bold uppercase tracking-[0.12em] text-muted">Player guide</p>
           <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl">Character Creation</h1>
-          <p className="character-lede">
+          <p className="mt-3 text-lg text-muted">
             Build a User, Stand, or alternative character source by choosing stats, abilities, and properties within
             your setting&apos;s point-buy budget.
           </p>
         </header>
 
-        <div className="character-layout">
-          <aside className="character-toc" aria-label="Character creation sections">
-            <p className="character-toc-title">On this page</p>
+        <div className="grid items-start gap-8 md:grid-cols-[minmax(0,14rem)_minmax(0,48rem)] max-md:block">
+          <aside
+            className="sticky top-4 rounded-xl border border-fg/14 bg-bg-lt/72 p-4 max-md:static max-md:mb-8 [&_a]:rounded-md [&_a]:px-2 [&_a]:py-1.5 [&_a]:text-sm [&_a]:text-fg [&_a]:no-underline [&_a:hover]:bg-bg-hl [&_a:focus-visible]:bg-bg-hl [&_a:focus-visible]:outline-none [&_nav]:grid [&_nav]:gap-0.5 max-md:[&_nav]:grid-cols-2"
+            aria-label="Character creation sections"
+          >
+            <p className="mb-2 text-xs font-bold uppercase tracking-[0.08em]">On this page</p>
             <nav>
               <a href="#point-buy-tiers">Point buy tiers</a>
               <a href="#bios">Bios</a>
@@ -37,8 +40,8 @@ export default function CharacterCreation() {
             </nav>
           </aside>
 
-          <div className="character-prose">
-      <p className="character-intro">
+          <div className="min-w-0 [&_p]:mb-5 [&_p]:whitespace-pre-line [&_li]:whitespace-pre-line [&_ul]:mb-6 [&_ul]:grid [&_ul]:gap-3 [&_ul]:pl-5 [&_li::marker]:text-brand [&_ul_ul]:mt-3">
+      <p>
         Stats determine the dice pool for their uses, and are different for Users and Stands.
         Each Stat has a rank from E to A, with niche instances of Ø (Always Failure), ∞ (10d6), and S (Special/Other, is not an A+)
 
@@ -52,8 +55,8 @@ export default function CharacterCreation() {
         1-2 points can be moved from one pool to the other.
         Some settings invert them, using the large pool for Users and small pool for Stands.
       </p>
-      <h2 id="point-buy-tiers" className="character-section-title text-xl font-medium">Point buy tiers</h2>
-      <ul className="character-data-list" aria-label="Point buy tiers">
+      <h2 id="point-buy-tiers" className="mt-12 scroll-mt-4 border-t border-fg/18 pt-4 text-xl font-medium max-md:mt-10">Point buy tiers</h2>
+      <ul className="mb-6 grid list-none gap-0 overflow-hidden rounded-xl border border-fg/14 bg-bg-lt/58 p-0 [&>li]:grid [&>li]:grid-cols-[minmax(7rem,0.7fr)_minmax(7rem,1fr)] [&>li]:items-baseline [&>li]:gap-3 [&>li]:border-b [&>li]:border-fg/12 [&>li]:px-4 [&>li]:py-3 [&>li:last-child]:border-b-0 [&>li>strong]:tabular-nums max-md:[&>li]:grid-cols-[1fr_1fr]" aria-label="Point buy tiers">
         <li><span>Sad</span><strong>12 / 12</strong></li>
         <li><span>Minion</span><strong>15 / 18</strong></li>
         <li><span>Low</span><strong>17 / 20</strong></li>
@@ -64,7 +67,7 @@ export default function CharacterCreation() {
         <li><span>Fabulous</span><strong>24 / 32</strong></li>
         <li><span>Over Heaven</span><strong>26 / 40</strong></li>
       </ul>
-      <h2 id="bios" className="character-section-title text-xl font-medium">Bios</h2>
+      <h2 id="bios" className="mt-12 scroll-mt-4 border-t border-fg/18 pt-4 text-xl font-medium max-md:mt-10">Bios</h2>
       <p>
         Every character has personality traits, history, and a philosophy.
         The Moxie Advantage focuses on this section for its references.
@@ -74,8 +77,8 @@ export default function CharacterCreation() {
         A more detailed Bio will have more chances to justify the Advantage.
         The Bio grows with the character themselves, as events unfold...
       </p>
-      <h2 id="user-stats" className="character-section-title text-xl font-medium">User Stats</h2>
-      <ul className="character-data-list character-stat-list" aria-label="User stat ranks">
+      <h2 id="user-stats" className="mt-12 scroll-mt-4 border-t border-fg/18 pt-4 text-xl font-medium max-md:mt-10">User Stats</h2>
+      <ul className="mb-6 grid list-none gap-0 overflow-hidden rounded-xl border border-fg/14 bg-bg-lt/58 p-0 [&>li]:grid [&>li]:grid-cols-[2rem_minmax(8rem,0.8fr)_minmax(0,2fr)] [&>li]:items-baseline [&>li]:gap-3 [&>li]:border-b [&>li]:border-fg/12 [&>li]:px-4 [&>li]:py-3 [&>li:last-child]:border-b-0 [&>li>strong]:tabular-nums max-md:[&>li]:grid-cols-[2rem_1fr] max-md:[&>li_span:last-child]:col-start-2" aria-label="User stat ranks">
         <li><span>E</span><strong>1d6 · 1 point</strong><span>Very weak, possibly handicapped.</span></li>
         <li><span>D</span><strong>2d6 · 2 points</strong><span>Substandard, lacking in that area.</span></li>
         <li><span>C</span><strong>3d6 · 3 points</strong><span>Healthy, but nothing spectacular.</span></li>
@@ -114,7 +117,7 @@ export default function CharacterCreation() {
           Low Luck - Danny, Masazo, Doppio
         </li>
       </ul>
-      <h2 id="stand-stats" className="character-section-title text-xl font-medium">Stand Stats</h2>
+      <h2 id="stand-stats" className="mt-12 scroll-mt-4 border-t border-fg/18 pt-4 text-xl font-medium max-md:mt-10">Stand Stats</h2>
       <div>
         <ul>
           <li>
@@ -180,7 +183,7 @@ export default function CharacterCreation() {
           Ø/E/D/C/B/A/∞ = 0/1/2/3/4/5/15 Ranks.
         </p>
       </div>
-      <h2 id="rank-burns" className="character-section-title text-xl font-medium">Rank Burns</h2>
+      <h2 id="rank-burns" className="mt-12 scroll-mt-4 border-t border-fg/18 pt-4 text-xl font-medium max-md:mt-10">Rank Burns</h2>
       <p>
         The Luck & Learning Ranks are a consumable resource for boons.
         Luck burns are usually temporary, restored after the session ends.
@@ -221,7 +224,7 @@ export default function CharacterCreation() {
         Adaptive ___ (-X+2 Temp) - Any of the above, but it goes away after the session ends.
         Stand Users only. An Adaptive Invention would cost 5 Temp instead of 3 Permanent.
       </p>
-      <h2 id="range-learning-ranks" className="character-section-title text-xl font-medium">Range/Learning Ranks</h2>
+      <h2 id="range-learning-ranks" className="mt-12 scroll-mt-4 border-t border-fg/18 pt-4 text-xl font-medium max-md:mt-10">Range/Learning Ranks</h2>
       <ul>
         <li>E: 1 Rank ~ 2 Meters or below</li>
         <li>D: 2 Ranks ~ 6M</li>
@@ -233,7 +236,7 @@ export default function CharacterCreation() {
             Tiles are 2 meters each. 10 meters = 5 Tiles, while Movement is ~8-12 Tiles.
         </li>
       </ul>
-      <h2 id="properties" className="character-section-title text-xl font-medium">Properties</h2>
+      <h2 id="properties" className="mt-12 scroll-mt-4 border-t border-fg/18 pt-4 text-xl font-medium max-md:mt-10">Properties</h2>
       <p>
         Some Stands have unique physiologies or affinities, neither ability nor type. 
         These Properties open the door to otherwise unrealistic actions.
@@ -249,7 +252,7 @@ export default function CharacterCreation() {
         e.g. Justice's fog form, Hierophant Green's barriers.
 
       </p>
-      <h2 id="abilities" className="character-section-title text-xl font-medium">Abilities</h2>
+      <h2 id="abilities" className="mt-12 scroll-mt-4 border-t border-fg/18 pt-4 text-xl font-medium max-md:mt-10">Abilities</h2>
       <p>
         Stands have a unique Ability, which bends reality to its will.
         An ideal Ability is esoteric, being very versatile or hyperspecific.
@@ -310,7 +313,7 @@ export default function CharacterCreation() {
           e.g. MiH's ability, GER's ability, TWOH's ability.
         </li>
       </ul>
-      <h2 id="stand-types" className="character-section-title text-xl font-medium">Stand Types</h2>
+      <h2 id="stand-types" className="mt-12 scroll-mt-4 border-t border-fg/18 pt-4 text-xl font-medium max-md:mt-10">Stand Types</h2>
       <p>
         Stands fall into a mix of these archetypes.
       </p>
@@ -451,7 +454,7 @@ export default function CharacterCreation() {
           </p>
         </li>
       </ul>
-      <h2 id="alternative-character-options" className="character-section-title text-xl font-medium">「Alternative Character Options」</h2>
+      <h2 id="alternative-character-options" className="mt-12 scroll-mt-4 border-t border-fg/18 pt-4 text-xl font-medium max-md:mt-10">「Alternative Character Options」</h2>
       <p>
         Rather than a Stand, you have another boon to fight on-par with Stand Users. 
         The Source uses the same Stats as Stands, and a Special Ability priced the same way.
@@ -466,7 +469,7 @@ export default function CharacterCreation() {
         Alternative User Types are Freak, Alien, Ghost, Rock Human, & Pillar Man.
         Alternative Sources are Hamon, Vampire, Spin, Armed Phenomenon, & Cyborg.
       </p>
-      <h2 id="alternative-user-types" className="character-section-title text-xl font-medium">「Alternative User Types」</h2>
+      <h2 id="alternative-user-types" className="mt-12 scroll-mt-4 border-t border-fg/18 pt-4 text-xl font-medium max-md:mt-10">「Alternative User Types」</h2>
       <ul>
       <li>
         <h3>Freak 😛</h3>
@@ -544,7 +547,7 @@ export default function CharacterCreation() {
         </p>
       </li>
       </ul>
-      <h2 id="alternative-power-sources" className="character-section-title text-xl font-medium">「Alternative Power sources」</h2>
+      <h2 id="alternative-power-sources" className="mt-12 scroll-mt-4 border-t border-fg/18 pt-4 text-xl font-medium max-md:mt-10">「Alternative Power sources」</h2>
       <h3>Hamon Warrior 🌊</h3>
       <p>
         An ancient breathing technique, Hamon is drawn from the User's vital energy. 
@@ -735,7 +738,7 @@ export default function CharacterCreation() {
         Range = How advanced the Cyborg's Experimental Upgrades are.
         Learning = Resources. How quickly a Cyborg can surpass their limits.
       </p>
-      <h2 id="alternative-source-range-stats" className="character-section-title text-xl font-medium">Alternative Source Range Stats</h2>
+      <h2 id="alternative-source-range-stats" className="mt-12 scroll-mt-4 border-t border-fg/18 pt-4 text-xl font-medium max-md:mt-10">Alternative Source Range Stats</h2>
       <ul>
         <li>
           <h3>Hamon</h3>

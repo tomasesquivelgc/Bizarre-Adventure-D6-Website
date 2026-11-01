@@ -4,14 +4,12 @@ import React, { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router";
 
 const navLinkClassName = ({ isActive }: { isActive: boolean }) =>
-  `nav-link${isActive ? " nav-link-active" : ""}`;
+  `text-fg rounded-md px-2 py-1.5 hover:bg-black/4 md:-my-3 md:inline-flex md:items-center md:py-3${isActive ? " bg-bg-lt" : ""}`;
 
 export default function Nav() {
   const [open, setOpen] = useState(false);
-  // color variables are controlled via `app/app.css` (CSS variables)
-
   return (
-    <header className="site-nav shadow-sm">
+    <header className="bg-bg-hl shadow-sm">
       <div className="container mx-auto px-4 py-3 flex items-center justify-between">
         <div className="flex items-center gap-4">
           <button
@@ -48,7 +46,7 @@ export default function Nav() {
       </div>
 
       {open && (
-        <nav className="md:hidden bg-transparent border-t">
+        <nav className="border-t bg-transparent md:hidden">
           <div className="px-4 pb-4 space-y-2">
             <NavLink to="/" className={({ isActive }) => `block ${navLinkClassName({ isActive })}`} onClick={() => setOpen(false)}>
               Home
