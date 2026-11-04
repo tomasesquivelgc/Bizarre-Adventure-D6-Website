@@ -6,7 +6,7 @@ export function meta({}: Route.MetaArgs) {
 
 export default function Resources() {
   return (
-    <main className="px-4 pb-16 pt-16 leading-[1.7] [&_a]:font-[650] [&_a]:text-fg [&_a]:decoration-[0.1em] [&_a]:underline-offset-[0.18em] [&_a:hover]:bg-bg-hl/72 [&_a:hover]:text-fg [&_a:hover]:outline [&_a:hover]:outline-2 [&_a:hover]:outline-fg/45 [&_a:hover]:outline-offset-2 [&_a:focus-visible]:bg-bg-hl/72 [&_a:focus-visible]:text-fg [&_a:focus-visible]:outline [&_a:focus-visible]:outline-2 [&_a:focus-visible]:outline-fg/45 [&_a:focus-visible]:outline-offset-2 [&_p]:mb-5 [&_p]:whitespace-pre-line [&_li::marker]:text-brand [&_ul]:mb-6 [&_ul]:grid [&_ul]:gap-2 [&_ul]:pl-5">
+    <main className="mx-auto w-gr-big bg-bg px-4 pb-16 pt-16 leading-[1.7] [&_a]:font-[650] [&_a]:text-fg [&_a]:decoration-[0.1em] [&_a]:underline-offset-[0.18em] [&_a:hover]:bg-bg-hl/72 [&_a:hover]:text-fg [&_a:hover]:outline [&_a:hover]:outline-2 [&_a:hover]:outline-fg/45 [&_a:hover]:outline-offset-2 [&_a:focus-visible]:bg-bg-hl/72 [&_a:focus-visible]:text-fg [&_a:focus-visible]:outline [&_a:focus-visible]:outline-2 [&_a:focus-visible]:outline-fg/45 [&_a:focus-visible]:outline-offset-2 [&_p]:mb-5 [&_p]:whitespace-pre-line [&_li::marker]:text-brand [&_ul]:mb-6 [&_ul]:grid [&_ul]:gap-2 [&_ul]:pl-5">
       <div className="mx-auto max-w-7xl">
         <header className="mb-8 border-b border-fg/18 pb-4">
           <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl">「Resources」</h1>

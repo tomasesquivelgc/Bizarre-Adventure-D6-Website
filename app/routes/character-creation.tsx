@@ -6,7 +6,7 @@ export function meta({}: Route.MetaArgs) {
 
 export default function CharacterCreation() {
   return (
-    <main id="character-content" className="px-4 pb-16 pt-16 leading-[1.7]">
+    <main id="character-content" className="mx-auto w-gr-big bg-bg px-4 pb-16 pt-16 leading-[1.7]">
       <div className="mx-auto max-w-7xl">
         <header className="mb-8 max-w-3xl">
           <p className="text-xs font-bold uppercase tracking-[0.12em] text-muted">Player guide</p>

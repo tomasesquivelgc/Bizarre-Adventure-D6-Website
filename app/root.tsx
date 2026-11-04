@@ -33,7 +33,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Meta />
         <Links />
       </head>
-      <body className="bg-bg text-fg font-sans dark:scheme-dark">
+      <body className="flex min-h-svh flex-col bg-[url('/symbol_bg.jpg')] bg-repeat bg-scroll text-fg font-sans dark:scheme-dark">
         <Nav />
         {children}
         <ScrollRestoration />
@@ -64,7 +64,7 @@ export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
   }
 
   return (
-    <main className="pt-16 p-4 container mx-auto">
+    <main className="mx-auto w-full max-w-7xl bg-bg p-4 pt-16">
       <h1>{message}</h1>
       <p>{details}</p>
       {stack && (
