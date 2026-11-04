@@ -1,9 +1,15 @@
 export function Welcome() {
   return (
-    <main className="mx-auto flex w-gr-big flex-1 flex-col bg-bg pb-4">
-      <div className="mx-auto flex flex-q flex-col items-center justify-center px-[9%] py-[5.5%]">
-        <h1 className="text-gr-hero">Bizarre Adventures D6</h1>
-        <p className="text-gr-body">v0.9</p>
+    <main className="mx-auto flex md:w-gr-big flex-1 flex-col bg-bg pb-4">
+      <div className="mx-auto flex flex-q flex-col items-center justify-center px-[9%]">
+        <div className="flex flex-col items-center w-full py-4 ">
+          <span className="text-center w-full mx-auto text-gr-hero font-arial-narrow font-bold italic tracking-tight bg-linear-to-b from-jojo-pink via-jojo-rose to-white bg-clip-text text-transparent [-webkit-text-stroke:2px_black]">
+            BIZARRE ADVENTURES D6
+          </span>
+          <span className="text-gr-body font-arial-narrow font-bold italic tracking-tight text-jojo-red">v0.9</span>
+        </div>
+        
+
         <h2 className="text-gr-h1">
           What Is This?
         </h2>

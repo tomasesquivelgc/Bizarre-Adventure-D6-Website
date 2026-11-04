@@ -33,7 +33,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Meta />
         <Links />
       </head>
-      <body className="flex min-h-svh flex-col bg-[url('/symbol_bg.jpg')] bg-repeat bg-scroll text-fg font-sans dark:scheme-dark">
+      <body className="flex min-h-svh flex-col bg-[url('/bg.avif')] bg-repeat bg-scroll text-fg font-sans dark:scheme-dark">
         <Nav />
         {children}
         <ScrollRestoration />

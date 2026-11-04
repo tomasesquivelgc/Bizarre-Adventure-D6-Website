@@ -20,13 +20,19 @@ export default {
       colors: {
         brand: "#6b9edf",
         muted: "#6b7280",
-        bg: "#E3B6DF",
-        "bg-dk": "#b140a6",
-        "bg-lt": "#e0aadb",
-        "bg-hl": "#D9B8FF",
+        bg: "#FFEDCC",
         fg: "#000000",
+        "jojo-pink": "#F50D7A",
+        "jojo-rose": "#FF79B4",
+        "ojo-blush": "#FFD6E7",
+        "jojo-red": "#EB0E17",
       },
       fontFamily: {
+        "arial-narrow": [
+          '"Arial Narrow"',
+          "Arial",
+          "sans-serif",
+        ],
         sans: [
           "Inter",
           "ui-sans-serif",

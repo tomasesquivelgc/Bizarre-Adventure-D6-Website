@@ -6,7 +6,7 @@ export function meta({}: Route.MetaArgs) {
 
 export default function Mechanics() {
   return (
-    <main className="mx-auto w-gr-big bg-bg">
+    <main className="mx-auto md:w-gr-big bg-bg">
       <div className="mx-auto flex flex-q flex-col items-center justify-center px-[9%] py-[5.5%]">
         <h1 className="text-gr-h1 font-semibold mb-4">Mechanics</h1>
         <h2 className="text-gr-h2 font-medium mb-2">Rolling</h2>

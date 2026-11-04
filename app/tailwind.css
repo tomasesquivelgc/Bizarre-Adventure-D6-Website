@@ -1,2 +1,35 @@
 @config "../tailwind.config.js";
 @import "tailwindcss";
+
+@font-face {
+  font-family: "Arial Narrow";
+  src: url("/fonts/arialnarrow.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Arial Narrow";
+  src: url("/fonts/arialnarrow_bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Arial Narrow";
+  src: url("/fonts/arialnarrow_italic.ttf") format("truetype");
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Arial Narrow";
+  src: url("/fonts/arialnarrow_bolditalic.ttf") format("truetype");
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+}
+

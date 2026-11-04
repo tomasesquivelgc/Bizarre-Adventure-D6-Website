@@ -1,68 +1,67 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
-import { Link, NavLink } from "react-router";
+import React, { useState } from "react";
+import { NavLink } from "react-router";
 
-const navLinkClassName = ({ isActive }: { isActive: boolean }) =>
-  `text-fg rounded-md px-2 py-1.5 hover:bg-black/4 md:-my-3 md:inline-flex md:items-center md:py-3${isActive ? " bg-bg-lt" : ""}`;
+const navLinkClassName =
+  "text-white rounded-md px-3 py-2 text-md font-medium hover:bg-white/10 transition-colors md:inline-flex md:items-center";
 
 export default function Nav() {
   const [open, setOpen] = useState(false);
+
   return (
-    <header className="bg-bg-hl shadow-sm">
-      <div className="container mx-auto px-4 py-3 flex items-center justify-between">
-        <div className="flex items-center gap-4">
+    <header className="sticky top-0 z-50 w-full bg-black shadow-sm">
+      <div className="flex w-full items-center justify-between px-4 py-2">
+        <h1>
+          <img src="/BAD6_logo.png" alt="Bizarre Adventures D6" className="h-16 w-auto" />
+        </h1>
+
+        <nav className="hidden items-center gap-2 md:flex">
+          <NavLink to="/" className={navLinkClassName} onClick={() => setOpen(false)}>
+            Home
+          </NavLink>
+          <NavLink to="/mechanics" className={navLinkClassName} onClick={() => setOpen(false)}>
+            Mechanics
+          </NavLink>
+          <NavLink to="/character-creation" className={navLinkClassName} onClick={() => setOpen(false)}>
+            Character Creation
+          </NavLink>
+          <NavLink to="/resources" className={navLinkClassName} onClick={() => setOpen(false)}>
+            Resources
+          </NavLink>
+        </nav>
+
+        <div className="relative md:hidden">
           <button
             aria-label="Toggle menu"
-            className="md:hidden p-2 rounded-lg border"
+            className="rounded-lg border border-white/20 p-2 text-white md:hidden"
             onClick={() => setOpen((s) => !s)}
           >
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
               <path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
             </svg>
           </button>
 
-          <Link to="/" className="font-semibold text-lg" onClick={() => setOpen(false)}>
-            Bizarre Adventure
-          </Link>
-
-          <nav className="hidden md:flex items-center gap-4 ml-6">
-            <NavLink to="/" className={navLinkClassName} onClick={() => setOpen(false)}>
-              Home
-            </NavLink>
-            <NavLink to="/mechanics" className={navLinkClassName} onClick={() => setOpen(false)}>
-              Mechanics
-            </NavLink>
-            <NavLink to="/character-creation" className={navLinkClassName} onClick={() => setOpen(false)}>
-              Character Creation
-            </NavLink>
-            <NavLink to="/resources" className={navLinkClassName} onClick={() => setOpen(false)}>
-              Resources
-            </NavLink>
-          </nav>
+          {open && (
+            <nav className="absolute right-0 top-full border border-fg/10 bg-black">
+              <div className="w-max space-y-2 p-4">
+                <NavLink to="/" className={`block ${navLinkClassName}`} onClick={() => setOpen(false)}>
+                  Home
+                </NavLink>
+                <NavLink to="/mechanics" className={`block ${navLinkClassName}`} onClick={() => setOpen(false)}>
+                  Mechanics
+                </NavLink>
+                <NavLink to="/character-creation" className={`block ${navLinkClassName}`} onClick={() => setOpen(false)}>
+                  Character Creation
+                </NavLink>
+                <NavLink to="/resources" className={`block ${navLinkClassName}`} onClick={() => setOpen(false)}>
+                  Resources
+                </NavLink>
+              </div>
+            </nav>
+          )}
         </div>
-
-        <div className="flex items-center gap-3" />
       </div>
-
-      {open && (
-        <nav className="border-t bg-transparent md:hidden">
-          <div className="px-4 pb-4 space-y-2">
-            <NavLink to="/" className={({ isActive }) => `block ${navLinkClassName({ isActive })}`} onClick={() => setOpen(false)}>
-              Home
-            </NavLink>
-            <NavLink to="/mechanics" className={({ isActive }) => `block ${navLinkClassName({ isActive })}`} onClick={() => setOpen(false)}>
-              Mechanics
-            </NavLink>
-            <NavLink to="/character-creation" className={({ isActive }) => `block ${navLinkClassName({ isActive })}`} onClick={() => setOpen(false)}>
-              Character Creation
-            </NavLink>
-            <NavLink to="/resources" className={({ isActive }) => `block ${navLinkClassName({ isActive })}`} onClick={() => setOpen(false)}>
-              Resources
-            </NavLink>
-          </div>
-        </nav>
-      )}
     </header>
   );
 }

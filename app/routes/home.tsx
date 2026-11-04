@@ -3,8 +3,12 @@ import { Welcome } from "../welcome/welcome";
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "Bizarre Adventure: D6" },
-    { name: "description", content: "Welcome to React Router!" },
+    { title: "Bizarre Adventures D6 | Tabletop RPG" },
+    {
+      name: "description",
+      content:
+        "A tabletop roleplaying system inspired by JoJo's Bizarre Adventure.",
+    },
   ];
 }
 
