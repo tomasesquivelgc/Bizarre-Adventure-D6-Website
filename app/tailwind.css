@@ -1,6 +1,48 @@
 @config "../tailwind.config.js";
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --theme-page: #efe8dc;
+  --theme-bg: #fbf7f0;
+  --theme-fg: #1c1917;
+  --theme-muted: #57534e;
+  --theme-brand: #2458a6;
+  --theme-bg-purple: #d9def3;
+  --theme-bg-lt: #ffffff;
+  --theme-bg-hl: #e6dfd2;
+  color-scheme: light;
+}
+
+.dark {
+  --theme-page: #111827;
+  --theme-bg: #1f2937;
+  --theme-fg: #e5e7eb;
+  --theme-muted: #6b7280;
+  --theme-brand: #6b9edf;
+  --theme-bg-purple: #2e3872;
+  --theme-bg-lt: #374151;
+  --theme-bg-hl: #4b5563;
+  color-scheme: dark;
+}
+
+.dark body {
+  background-image: url("/bg.avif");
+  background-repeat: repeat;
+}
+
+@theme inline {
+  --color-page: var(--theme-page);
+  --color-bg: var(--theme-bg);
+  --color-fg: var(--theme-fg);
+  --color-muted: var(--theme-muted);
+  --color-brand: var(--theme-brand);
+  --color-bg-purple: var(--theme-bg-purple);
+  --color-bg-lt: var(--theme-bg-lt);
+  --color-bg-hl: var(--theme-bg-hl);
+}
+
 @font-face {
   font-family: "Arial Narrow";
   src: url("/fonts/arialnarrow.ttf") format("truetype");

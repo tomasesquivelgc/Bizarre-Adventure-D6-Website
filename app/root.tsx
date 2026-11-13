@@ -7,6 +7,7 @@ import {
   ScrollRestoration,
 } from "react-router";
 import Nav from "./nav/Nav";
+import { themeInitScript } from "./theme";
 
 import type { Route } from "./+types/root";
 import "./tailwind.css";
@@ -26,14 +27,15 @@ export const links: Route.LinksFunction = () => [
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <Meta />
         <Links />
+        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
       </head>
-      <body className="flex min-h-svh flex-col bg-[url('/bg.avif')] bg-repeat bg-scroll text-fg font-sans dark:scheme-dark">
+      <body className="flex min-h-svh flex-col bg-page text-fg font-sans">
         <Nav />
         {children}
         <ScrollRestoration />
