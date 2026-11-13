@@ -20,12 +20,13 @@ export default {
       colors: {
         brand: "#6b9edf",
         muted: "#6b7280",
-        bg: "#FFEDCC",
-        fg: "#000000",
+        bg: "#1F2937",
+        fg: "#E5E7EB",
         "jojo-pink": "#F50D7A",
         "jojo-rose": "#FF79B4",
-        "ojo-blush": "#FFD6E7",
+        "jojo-blush": "#FFD6E7",
         "jojo-red": "#EB0E17",
+        "bg-purple": "#2e3872"
       },
       fontFamily: {
         "arial-narrow": [
