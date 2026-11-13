@@ -23,15 +23,15 @@ export function Welcome() {
           </h2>
           <div className="flex gap-2">
             <p>
-              A Tabletop RPG System, made with the intention of emulating <span className="underline">JoJo's Bizarre Adventure,</span> a popular Manga and Anime series.
+              A <span className="italic">Tabletop RPG System</span>, made with the intention of emulating <span className="underline">JoJo's Bizarre Adventure,</span> a popular Manga and Anime series.
               <br />
               <br />
-              The <span className="underline">Players</span> create characters (PCs) to play as, and lead the story. They are the active movers and decision-makers of the game, as a group of 3-6 people.
+              The <span className="underline">Players</span> create characters <span className="font-bold">(PCs)</span> to play as, and lead the story. They are the active movers and decision-makers of the game, as a group of 3-6 people.
               <br />
-              The <span className="underline">Narrator</span> (GM) controls the flow of the world and NPCs. They are the final arbiter of any rulings made at their table, this rulebook is only a guideline.
+              The <span className="underline">Narrator</span> <span className="font-bold">(GM)</span> controls the flow of the world and NPCs. They are the final arbiter of any rulings made at their table, this rulebook is only a guideline.
               <br />
               <br />
-              The core conceit of JJBA is the Stand User, one wielding a manifestation of their soul.
+              The core conceit of JJBA is the <span className="font-bold">Stand User</span>, one wielding a manifestation of their soul.
               <br />
               Every Stand has a unique <span className="underline">Ability</span>, <span className="underline">Typing</span>, & <span className="underline">Properties</span>.
               <br />
@@ -49,24 +49,25 @@ export function Welcome() {
               Certain non-Stand Users may be able to see or hurt Stands, by Narrator decision.
               <br />
               <br />
-              For the detailed rules on Stands, <a href="https://mangadex.org/chapter/24555/2" className="underline">read this chapter</a>.
+              For the detailed rules on Stands, <a href="https://mangadex.org/chapter/24555/2" className="underline text-link-blue">read this chapter</a>.
               Text is read from right to left, as opposed to a typical book's left to right.
-              The television adaptation can be viewed on Crunchyroll <a href="http://www.crunchyroll.com/jojos-bizarre-adventure" className="underline">here</a>, or pirated on nyaa.si
+              The television adaptation can be viewed on Crunchyroll <a href="http://www.crunchyroll.com/jojos-bizarre-adventure" className="underline text-link-blue">here</a>, or pirated on nyaa.si
             </p>
           </div>
           <h2 className="text-gr-h2 pt-10">Needed Materials</h2>
           <div className="flex w-full">
             <p>
-              A handful of six-sided dice (D6) to roll when needed.
+              A handful of <span className="underline">six-sided dice</span> <span className="font-bold underline">(D6)</span> to roll when needed.
               <br />
-              A pencil + paper to write down stats and make maps.
+              A <span className="underline">pencil + paper</span> to write down stats and make maps.
               <br />
-              Alternatively, a paid account on Roll20 or Foundry VTT for online play.
+              Alternatively, a paid account on <a href="https://roll20.net/" className="underline text-link-blue">Roll20</a> or <a href="https://foundryvtt.com/" className="underline text-link-blue">Foundry VTT</a> for online play.
               <br />
               <br />
-              BAD6 Discord now operational.
+              BAD6 <a href="https://discordapp.com/invite/2QVASDt" className="underline text-link-blue">Discord</a> now operational.
               <br />
-              Changelog here, and v.0.75b can be found here.
+              Changelog <a href="https://docs.google.com/document/d/17T32edqs6SqHV7KYUpTuskYgDnnvjfjzvmJ_PGfKvUQ/view" className="underline text-link-blue">here</a>, 
+              and v.0.75b can be found <a href="https://docs.google.com/document/d/1SfNOul18JrU_dAcTkiIVmvdY3tsSowobP-KP9EiIers/view" className="underline text-link-blue">here</a>.
               <br />
               Roll20 & Foundry content can be found in Additional Links.
             </p>
