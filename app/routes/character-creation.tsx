@@ -4,9 +4,39 @@ export function meta({}: Route.MetaArgs) {
   return [{ title: "Character Creation - Bizarre Adventure" }];
 }
 
+const sections = [
+  ["point-buy-tiers", "Point buy tiers"],
+  ["bios", "Bios"],
+  ["user-stats", "User Stats"],
+  ["stand-stats", "Stand Stats"],
+  ["rank-burns", "Rank Burns"],
+  ["range-learning-ranks", "Range/Learning Ranks"],
+  ["properties", "Properties"],
+  ["abilities", "Abilities"],
+  ["stand-types", "Stand Types"],
+  ["alternative-character-options", "Alternative Character Options"],
+  ["alternative-user-types", "Alternative User Types"],
+  ["alternative-power-sources", "Alternative Power Sources"],
+  ["alternative-source-range-stats", "Alternative Source Range Stats"],
+] as const;
+
 export default function CharacterCreation() {
   return (
-    <main id="character-content" className="mx-auto md:w-gr-big bg-bg px-4 pb-16 pt-16 leading-[1.7]">
+    <>
+      <aside
+        className="z-40 mx-auto mb-4 w-[calc(100%-2rem)] rounded-xl border border-fg/14 bg-bg-lt/72 p-4 md:w-gr-big lg:fixed lg:top-24 lg:left-[max(0.5rem,calc(19.1%-12.25rem))] lg:mb-0 lg:max-h-[calc(100vh-7rem)] lg:w-[11.25rem] lg:overflow-y-auto [&_a]:rounded-md [&_a]:px-2 [&_a]:py-1.5 [&_a]:text-sm [&_a]:text-fg [&_a]:no-underline [&_a:hover]:bg-bg-hl [&_a:focus-visible]:bg-bg-hl [&_a:focus-visible]:outline-none [&_nav]:grid [&_nav]:gap-0.5 max-lg:[&_nav]:grid-cols-2"
+        aria-label="Character creation sections"
+      >
+        <p className="mb-2 text-xs font-bold uppercase tracking-[0.08em]">On this page</p>
+        <nav>
+          {sections.map(([id, label]) => (
+            <a key={id} href={`#${id}`}>
+              {label}
+            </a>
+          ))}
+        </nav>
+      </aside>
+      <main id="character-content" className="mx-auto md:w-gr-big bg-bg px-4 pb-16 pt-16 leading-[1.7]">
       <div className="mx-auto max-w-7xl">
         <header className="mb-8 max-w-3xl">
           <p className="text-xs font-bold uppercase tracking-[0.12em] text-muted">Player guide</p>
@@ -16,29 +46,6 @@ export default function CharacterCreation() {
             your setting&apos;s point-buy budget.
           </p>
         </header>
-
-        <div className="grid items-start gap-8 md:grid-cols-[minmax(0,14rem)_minmax(0,48rem)] max-md:block">
-          <aside
-            className="sticky top-4 rounded-xl border border-fg/14 bg-bg-lt/72 p-4 max-md:static max-md:mb-8 [&_a]:rounded-md [&_a]:px-2 [&_a]:py-1.5 [&_a]:text-sm [&_a]:text-fg [&_a]:no-underline [&_a:hover]:bg-bg-hl [&_a:focus-visible]:bg-bg-hl [&_a:focus-visible]:outline-none [&_nav]:grid [&_nav]:gap-0.5 max-md:[&_nav]:grid-cols-2"
-            aria-label="Character creation sections"
-          >
-            <p className="mb-2 text-xs font-bold uppercase tracking-[0.08em]">On this page</p>
-            <nav>
-              <a href="#point-buy-tiers">Point buy tiers</a>
-              <a href="#bios">Bios</a>
-              <a href="#user-stats">User Stats</a>
-              <a href="#stand-stats">Stand Stats</a>
-              <a href="#rank-burns">Rank Burns</a>
-              <a href="#range-learning-ranks">Range/Learning Ranks</a>
-              <a href="#properties">Properties</a>
-              <a href="#abilities">Abilities</a>
-              <a href="#stand-types">Stand Types</a>
-              <a href="#alternative-character-options">Alternative Character Options</a>
-              <a href="#alternative-user-types">Alternative User Types</a>
-              <a href="#alternative-power-sources">Alternative Power Sources</a>
-              <a href="#alternative-source-range-stats">Alternative Source Range Stats</a>
-            </nav>
-          </aside>
 
           <div className="min-w-0 [&_p]:mb-5 [&_p]:whitespace-pre-line [&_li]:whitespace-pre-line [&_ul]:mb-6 [&_ul]:grid [&_ul]:gap-3 [&_ul]:pl-5 [&_li::marker]:text-brand [&_ul_ul]:mt-3">
       <p>
@@ -77,7 +84,7 @@ export default function CharacterCreation() {
         A more detailed Bio will have more chances to justify the Advantage.
         The Bio grows with the character themselves, as events unfold...
       </p>
-      <h2 id="user-stats" className="mt-12 scroll-mt-4 border-t border-fg/18 pt-4 text-xl font-medium max-md:mt-10">User Stats</h2>
+      <h2 id="user-stats" className="mt-12 scroll-mt-24 border-t border-fg/18 pt-4 text-xl font-medium max-md:mt-10">User Stats</h2>
       <ul className="mb-6 grid list-none gap-0 overflow-hidden rounded-xl border border-fg/14 bg-bg-lt/58 p-0 [&>li]:grid [&>li]:grid-cols-[2rem_minmax(8rem,0.8fr)_minmax(0,2fr)] [&>li]:items-baseline [&>li]:gap-3 [&>li]:border-b [&>li]:border-fg/12 [&>li]:px-4 [&>li]:py-3 [&>li:last-child]:border-b-0 [&>li>strong]:tabular-nums max-md:[&>li]:grid-cols-[2rem_1fr] max-md:[&>li_span:last-child]:col-start-2" aria-label="User stat ranks">
         <li><span>E</span><strong>1d6 · 1 point</strong><span>Very weak, possibly handicapped.</span></li>
         <li><span>D</span><strong>2d6 · 2 points</strong><span>Substandard, lacking in that area.</span></li>
@@ -837,8 +844,8 @@ This is the point value any given Experimental Upgrade can start at.
         </li>
       </ul>
           </div>
-        </div>
       </div>
     </main>
+    </>
   );
 }

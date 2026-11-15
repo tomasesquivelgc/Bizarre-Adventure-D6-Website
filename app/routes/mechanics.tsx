@@ -38,15 +38,44 @@ export function meta({}: Route.MetaArgs) {
   return [{ title: "Mechanics - Bizarre Adventure" }];
 }
 
+const sections = [
+  ["rolling", "Rolling"],
+  ["results", "Results"],
+  ["DC", "DC"],
+  ["actions", "Actions"],
+  ["dual-heat", "Dual Heat"],
+  ["advantage", "Advantage"],
+  ["hits", "Hits"],
+  ["retirement", "Retirement"],
+  ["gambits", "Gambits"],
+  ["hitLimit", "Hit Limit"],
+  ["dark-determination", "Dark Determination"],
+  ["turn-order", "Turn Order"],
+] as const;
+
 export default function Mechanics() {
   return (
-    <main className="mx-auto md:w-gr-big bg-bg">
+    <>
+      <aside
+        className="z-40 mx-auto mb-4 w-[calc(100%-2rem)] rounded-xl border border-fg/14 bg-bg-lt/72 p-4 md:w-gr-big lg:fixed lg:top-24 lg:left-[max(0.5rem,calc(19.1%-12.25rem))] lg:mb-0 lg:w-[11.25rem] [&_a]:rounded-md [&_a]:px-2 [&_a]:py-1.5 [&_a]:text-sm [&_a]:text-fg [&_a]:no-underline [&_a:hover]:bg-bg-hl [&_a:focus-visible]:bg-bg-hl [&_a:focus-visible]:outline-none [&_nav]:grid [&_nav]:gap-0.5 max-lg:[&_nav]:grid-cols-2"
+        aria-label="Mechanics sections"
+      >
+        <p className="mb-2 text-xs font-bold uppercase tracking-[0.08em]">On this page</p>
+        <nav>
+          {sections.map(([id, label]) => (
+            <a key={id} href={`#${id}`}>
+              {label}
+            </a>
+          ))}
+        </nav>
+      </aside>
+      <main className="mx-auto md:w-gr-big bg-bg">
       <div className="mx-auto flex flex-q flex-col items-center justify-center px-[9%] py-[5.5%]">
         <h1 className="text-gr-h1 font-semibold mb-4 underline">
           Mechanics
         </h1>
 
-        <h2 className="text-gr-h2 font-medium mb-2 underline">
+        <h2 id="rolling" className="text-gr-h2 font-medium mb-2 scroll-mt-24 underline">
           Rolling
         </h2>
         <p>
@@ -65,7 +94,7 @@ export default function Mechanics() {
           <BI>1/2/3/4/5</BI> dice
         </p>
 
-        <h2 className="text-gr-h2 font-medium mb-2 underline" id="results">
+        <h2 id="results" className="text-gr-h2 font-medium mb-2 scroll-mt-24 underline">
           Results
         </h2>
         <p>
@@ -81,7 +110,7 @@ export default function Mechanics() {
           <B>3</B> is the Sum.
         </p>
 
-        <h2 className="text-gr-h2 font-medium mb-2 underline" id="DC">
+        <h2 id="DC" className="text-gr-h2 font-medium mb-2 scroll-mt-24 underline">
           DC
         </h2>
         <p>
@@ -100,7 +129,7 @@ export default function Mechanics() {
           opens a new path.
         </p>
 
-        <h2 className="text-gr-h2 font-medium mb-2 underline">
+        <h2 id="actions" className="text-gr-h2 font-medium mb-2 scroll-mt-24 underline">
           Actions
         </h2>
         <p>
@@ -139,7 +168,7 @@ export default function Mechanics() {
           sweetening the deal.
         </p>
 
-        <h2 className="text-gr-h2 font-medium mb-2 underline">
+        <h2 id="dual-heat" className="text-gr-h2 font-medium mb-2 scroll-mt-24 underline">
           Dual Heat
         </h2>
         <p>
@@ -155,7 +184,7 @@ export default function Mechanics() {
           return the favor.
         </p>
 
-        <h2 className="text-gr-h2 font-medium mb-2 underline">
+        <h2 id="advantage" className="text-gr-h2 font-medium mb-2 scroll-mt-24 underline">
           Advantage
         </h2>
         <p>
@@ -214,7 +243,7 @@ export default function Mechanics() {
           <IU>But I refuse.</IU>
         </p>
 
-        <h2 className="text-gr-h2 font-medium mb-2 underline">
+        <h2 id="hits" className="text-gr-h2 font-medium mb-2 scroll-mt-24 underline">
           Hits
         </h2>
         <p>
@@ -239,7 +268,7 @@ export default function Mechanics() {
           succeeding.
         </p>
 
-        <h2 className="text-gr-h2 font-medium mb-2 underline">
+        <h2 id="retirement" className="text-gr-h2 font-medium mb-2 scroll-mt-24 underline">
           Retirement
         </h2>
         <p>
@@ -271,7 +300,7 @@ export default function Mechanics() {
           pose little threat.
         </p>
 
-        <h2 className="text-gr-h2 font-medium mb-2 underline" id="gambits">
+        <h2 id="gambits" className="text-gr-h2 font-medium mb-2 scroll-mt-24 underline">
           Gambits
         </h2>
         <p>
@@ -325,7 +354,7 @@ export default function Mechanics() {
           <I>Triggers</I> happen to line up.
         </p>
 
-        <h2 className="text-gr-h2 font-medium mb-2 underline" id="hitLimit">
+        <h2 id="hitLimit" className="text-gr-h2 font-medium mb-2 scroll-mt-24 underline">
           Hit Limit
         </h2>
         <p>
@@ -355,7 +384,7 @@ export default function Mechanics() {
           only reduces or removes Hits affected by that source.
         </p>
 
-        <h2 className="text-gr-h2 font-medium mb-2 underline">
+        <h2 id="dark-determination" className="text-gr-h2 font-medium mb-2 scroll-mt-24 underline">
           Dark Determination
         </h2>
         <p>
@@ -377,7 +406,7 @@ export default function Mechanics() {
           the goal is <U>reached</U> or they <U>die</U>.
         </p>
 
-        <h2 className="text-gr-h2 font-medium mb-2 underline">
+        <h2 id="turn-order" className="text-gr-h2 font-medium mb-2 scroll-mt-24 underline">
           Turn Order
         </h2>
         <p>
@@ -418,5 +447,6 @@ export default function Mechanics() {
         </p>
       </div>
     </main>
+    </>
   );
 }
