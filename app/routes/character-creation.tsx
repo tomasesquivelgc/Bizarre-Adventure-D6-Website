@@ -1,4 +1,5 @@
 import type { Route } from "./+types/home";
+import { OnThisPage } from "../components/OnThisPage";
 
 export function meta({}: Route.MetaArgs) {
   return [{ title: "Character Creation - Bizarre Adventure" }];
@@ -23,19 +24,11 @@ const sections = [
 export default function CharacterCreation() {
   return (
     <>
-      <aside
+      <OnThisPage
+        sections={sections}
+        ariaLabel="Character creation sections"
         className="z-40 mx-auto mb-4 w-[calc(100%-2rem)] rounded-xl border border-fg/14 bg-bg-lt/72 p-4 md:w-gr-big lg:fixed lg:top-24 lg:left-[max(0.5rem,calc(19.1%-12.25rem))] lg:mb-0 lg:max-h-[calc(100vh-7rem)] lg:w-[11.25rem] lg:overflow-y-auto [&_a]:rounded-md [&_a]:px-2 [&_a]:py-1.5 [&_a]:text-sm [&_a]:text-fg [&_a]:no-underline [&_a:hover]:bg-bg-hl [&_a:focus-visible]:bg-bg-hl [&_a:focus-visible]:outline-none [&_nav]:grid [&_nav]:gap-0.5 max-lg:[&_nav]:grid-cols-2"
-        aria-label="Character creation sections"
-      >
-        <p className="mb-2 text-xs font-bold uppercase tracking-[0.08em]">On this page</p>
-        <nav>
-          {sections.map(([id, label]) => (
-            <a key={id} href={`#${id}`}>
-              {label}
-            </a>
-          ))}
-        </nav>
-      </aside>
+      />
       <main id="character-content" className="mx-auto md:w-gr-big bg-bg px-4 pb-16 pt-16 leading-[1.7]">
       <div className="mx-auto max-w-7xl">
         <header className="mb-8 max-w-3xl">

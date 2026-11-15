@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 import type { Route } from "./+types/home";
 import { Link } from "react-router";
+import { OnThisPage } from "../components/OnThisPage";
 
 const B = ({ children }: { children: ReactNode }) => (
   <span className="font-bold">{children}</span>
@@ -56,19 +57,11 @@ const sections = [
 export default function Mechanics() {
   return (
     <>
-      <aside
+      <OnThisPage
+        sections={sections}
+        ariaLabel="Mechanics sections"
         className="z-40 mx-auto mb-4 w-[calc(100%-2rem)] rounded-xl border border-fg/14 bg-bg-lt/72 p-4 md:w-gr-big lg:fixed lg:top-24 lg:left-[max(0.5rem,calc(19.1%-12.25rem))] lg:mb-0 lg:w-[11.25rem] [&_a]:rounded-md [&_a]:px-2 [&_a]:py-1.5 [&_a]:text-sm [&_a]:text-fg [&_a]:no-underline [&_a:hover]:bg-bg-hl [&_a:focus-visible]:bg-bg-hl [&_a:focus-visible]:outline-none [&_nav]:grid [&_nav]:gap-0.5 max-lg:[&_nav]:grid-cols-2"
-        aria-label="Mechanics sections"
-      >
-        <p className="mb-2 text-xs font-bold uppercase tracking-[0.08em]">On this page</p>
-        <nav>
-          {sections.map(([id, label]) => (
-            <a key={id} href={`#${id}`}>
-              {label}
-            </a>
-          ))}
-        </nav>
-      </aside>
+      />
       <main className="mx-auto md:w-gr-big bg-bg">
       <div className="mx-auto flex flex-q flex-col items-center justify-center px-[9%] py-[5.5%]">
         <h1 className="text-gr-h1 font-semibold mb-4 underline">
