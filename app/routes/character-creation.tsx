@@ -195,8 +195,8 @@ export default function CharacterCreation() {
         Adapt is exclusive to Stand-Users, all other Learning uses are universal.
         If a Learning Burn is permanent, add Advantages = Ranks Burnt to its Intro Scene.
       </p>
+      <h3 id="luckBurn">Luck Burn</h3>
       <p>
-        Luck Burn
         Feint (-1 Temp) - Edit your Action/Reaction after hearing the enemy's, pre-roll.
         Instead of going for the left hook, I'll read their block and trip instead…
         Fudge (-2 Temp) - Add a free Advantage, pre-roll.
@@ -741,7 +741,7 @@ export default function CharacterCreation() {
       <h2 id="alternative-source-range-stats" className="mt-12 scroll-mt-4 border-t border-fg/18 pt-4 text-xl font-medium max-md:mt-10">Alternative Source Range Stats</h2>
       <ul>
         <li>
-          <h3>Hamon</h3>
+          <h3 id="hamon">Hamon</h3>
           <p>Range sets the limits of the Hamon Warrior's conduction.
 This affects what mediums can hold a charge of their Hamon, not just stop or pass.
 Matter above Rank C also requires a specialized Overdrive to be used as a medium.
@@ -758,7 +758,7 @@ Regular Hamon cannot interact with B/A/∞ Ranked materials.
           </ul>
         </li>
         <li>
-          <h3>Vampire</h3>
+          <h3 id="vampire">Vampire</h3>
           <p>Each rank in Range adds one organ system the Vampire controls beyond Circulatory.
 A vampire must have control of each section that involves their Function(s).
 The optional organ systems are; 
