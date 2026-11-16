@@ -29,6 +29,12 @@ export default {
           "Arial",
           "sans-serif",
         ],
+        "josefin-slab": [
+          '"Josefin Slab"',
+          "ui-serif",
+          "Georgia",
+          "serif",
+        ],
         sans: [
           "Inter",
           "ui-sans-serif",

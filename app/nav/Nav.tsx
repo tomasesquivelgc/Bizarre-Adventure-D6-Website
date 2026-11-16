@@ -5,7 +5,7 @@ import { NavLink } from "react-router";
 import { applyTheme, readAppliedTheme, type Theme } from "../theme";
 
 const navLinkClassName =
-  "rounded-md px-3 py-2 text-md font-medium text-white hover:bg-white/10 transition-colors md:inline-flex md:items-center";
+  "rounded-md px-3 py-2 text-lg  text-white hover:bg-white/10 transition-colors md:inline-flex md:items-center font-md";
 
 function ThemeToggle() {
   function toggleTheme() {
@@ -61,7 +61,7 @@ export default function Nav() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-black shadow-sm">
+    <header className="sticky top-0 z-50 w-full bg-black font-josefin-slab shadow-sm">
       <div className="relative flex w-full items-center justify-center px-4 py-2 md:justify-between">
         <h1>
           <NavLink to="/" aria-label="Go to home" onClick={() => setOpen(false)}>
