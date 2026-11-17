@@ -87,44 +87,59 @@ export default function Mechanics() {
           <BI>1/2/3/4/5</BI> dice
         </p>
 
-        <h2 id="results" className="text-gr-h2 font-medium mb-2 scroll-mt-24 underline">
-          Results
-        </h2>
-        <p>
-          When a given D6 is rolled, there are two possibilities.
-          <br />
-          Rolls of <B>1/2/3/4</B> are <BIU>Dead</BIU>, adding <B>+0</B>.
-          <br />
-          If it's a <B>5/6</B>, that die is <BIU>Live</BIU> and adds <B>+1</B>.
-          <br />
-          <U>Add</U> all +1s rolled for the <BIU>Sum</BIU>.
-          <br />
-          If <B>5d6</B> is rolled, and <B>3</B> dice are a <U>5 or 6</U>, then{" "}
-          <B>3</B> is the Sum.
-        </p>
+        <div className="w-full">
+          <img
+            src="/mechanics/rolling_results.webp"
+            alt="Close-up of a six-sided die"
+            className="float-left mb-3 mr-4 w-36 border-4 border-black sm:w-44"
+          />
+          <h2 id="results" className="text-gr-h2 text-center font-medium mb-2 scroll-mt-24 underline">
+            Results
+          </h2>
+          <p>
+            When a given D6 is rolled, there are two possibilities.
+            <br />
+            Rolls of <B>1/2/3/4</B> are <BIU>Dead</BIU>, adding <B>+0</B>.
+            <br />
+            If it's a <B>5/6</B>, that die is <BIU>Live</BIU> and adds <B>+1</B>.
+            <br />
+            <U>Add</U> all +1s rolled for the <BIU>Sum</BIU>.
+            <br />
+            If <B>5d6</B> is rolled, and <B>3</B> dice are a <U>5 or 6</U>, then{" "}
+            <B>3</B> is the Sum.
+          </p>
+          <div className="clear-both" />
+        </div>
 
-        <h2 id="DC" className="text-gr-h2 font-medium mb-2 scroll-mt-24 underline">
-          DC
-        </h2>
-        <p>
-          Rolls have a Difficulty (<BIU>DC</BIU>) assigned by the Narrator.
-          <br />A <IU>Sum</IU> of <B>(6)</B> minus a <IU>DC</IU> of <B>(4)</B>{" "}
-          would make a <BIU>+2 Difference</BIU>.
-          <br />
-          <BIU>Ties</BIU> cause a bizarre complication, neither success nor
-          failure.
-          <br />
-          Higher <I>Differences</I> mean <I>higher severity</I> of
-          success/failure.
-          <br />A <B>+3</B> difference is an <B>☆OVERPOSE☆</B>, the player adds
-          a bonus detail.
-          <br />A <B>-3</B> difference is an <B>☆UNDERPOSE☆</B>, so awry it
-          opens a new path.
-        </p>
+        <div className="w-full">
+          <h2 id="DC" className="text-gr-h2 text-center font-medium mb-2 scroll-mt-24 underline">
+            DC
+          </h2>
+          <p>
+            Rolls have a Difficulty (<BIU>DC</BIU>) assigned by the Narrator.
+            <br />A <IU>Sum</IU> of <B>(6)</B> minus a <IU>DC</IU> of <B>(4)</B>{" "}
+            would make a <BIU>+2 Difference</BIU>.
+            <br />
+            <BIU>Ties</BIU> cause a bizarre complication, neither success nor
+            failure.
+            <br />
+            Higher <I>Differences</I> mean <I>higher severity</I> of
+            success/failure.
+            <br />
+            <img
+              src="/mechanics/dc_actions.webp"
+              alt="A hand sketching a figure"
+              className="float-right mb-3 ml-4 w-44 border-4 border-black sm:w-60"
+            />
+            A <B>+3</B> difference is an <B>☆OVERPOSE☆</B>, the player adds
+            a bonus detail.
+            <br />A <B>-3</B> difference is an <B>☆UNDERPOSE☆</B>, so awry it
+            opens a new path.
+          </p>
 
-        <h2 id="actions" className="text-gr-h2 font-medium mb-2 scroll-mt-24 underline">
-          Actions
-        </h2>
+          <h2 id="actions" className="text-gr-h2 text-center font-medium mb-2 scroll-mt-24 underline">
+            Actions
+          </h2>
         <p>
           An <U>Action</U> is what the subject is <B>trying to do on their turn</B>.
           <br />
@@ -160,6 +175,8 @@ export default function Mechanics() {
           An <B>☆OVERPOSER☆</B> in a contest adds a <U>boon</U> to their victory,
           sweetening the deal.
         </p>
+          <div className="clear-both" />
+        </div>
 
         <h2 id="dual-heat" className="text-gr-h2 font-medium mb-2 scroll-mt-24 underline">
           Dual Heat
@@ -194,51 +211,71 @@ export default function Mechanics() {
           <IU>Stats & Advantages</IU> are assigned.
         </p>
 
-        <br />
+        <div className="mt-4 w-full">
+          <img
+            src="/mechanics/hype.webp"
+            alt="A stand bursting through a pile of cash"
+            className="float-left mb-2 mr-4 w-24 border-4 border-black sm:w-32"
+          />
+          <p className="text-center">
+            <BIU>+Hype</BIU> (<I>Nani?</I>) is gained through Rule Of Cool and{" "}
+            <U>novelty</U>.
+            <br />
+            <I>
+              Turning the <U>mundane</U> into a <B>spectacle</B>, instead of
+              repetition or expectation.
+            </I>
+            <br />
+            <IU>I'm gonna fix that spaghetti!</IU>
+          </p>
+          <div className="clear-both mb-4" />
 
-        <p className="text-center">
-          <BIU>+Hype</BIU> (<I>Nani?</I>) is gained through Rule Of Cool and{" "}
-          <U>novelty</U>.
-          <br />
-          <I>
-            Turning the <U>mundane</U> into a <B>spectacle</B>, instead of
-            repetition or expectation.
-          </I>
-          <br />
-          <IU>I'm gonna fix that spaghetti!</IU>
-        </p>
+          <img
+            src="/mechanics/ruse.webp"
+            alt="A young man pointing forward"
+            className="float-left mb-2 mr-4 w-24 border-4 border-black sm:w-32"
+          />
+          <p className="text-center">
+            <BIU>+Ruse</BIU> (<I>Toyu!</I>) - Seizing the <U>upper hand</U> with
+            outside-the-box tactics.
+            <br />
+            <I>
+              Using your <B>brains</B> over your <B>brawn</B>, instead of 'do slap
+              with big number'.
+            </I>
+            <br />
+            <IU>Your next line is...</IU>
+          </p>
+          <div className="clear-both mb-4" />
 
-        <br />
+          <img
+            src="/mechanics/moxie.webp"
+            alt="A close-up of a glaring face"
+            className="float-left mb-2 mr-4 w-24 border-4 border-black sm:w-32"
+          />
+          <p className="text-center">
+            <BIU>+Moxie</BIU> (<I>Muda...</I>) - Loyalty to <U>convictions</U>,
+            detrimental or not.
+            <br />
+            <I>
+              Acting on <B>Bio/personal philosophy</B>, instead of a{" "}
+              <U>blank avatar</U> of yourself.
+            </I>
+            <br />
+            <IU>But I refuse.</IU>
+          </p>
+          <div className="clear-both" />
+        </div>
 
-        <p className="text-center">
-          <BIU>+Ruse</BIU> (<I>Toyu!</I>) - Seizing the <U>upper hand</U> with
-          outside-the-box tactics.
-          <br />
-          <I>
-            Using your <B>brains</B> over your <B>brawn</B>, instead of 'do slap
-            with big number'.
-          </I>
-          <br />
-          <IU>Your next line is...</IU>
-        </p>
-
-        <br />
-
-        <p className="text-center">
-          <BIU>+Moxie</BIU> (<I>Muda...</I>) - Loyalty to <U>convictions</U>,
-          detrimental or not.
-          <br />
-          <I>
-            Acting on <B>Bio/personal philosophy</B>, instead of a{" "}
-            <U>blank avatar</U> of yourself.
-          </I>
-          <br />
-          <IU>But I refuse.</IU>
-        </p>
-
-        <h2 id="hits" className="text-gr-h2 font-medium mb-2 scroll-mt-24 underline">
+        <div className="w-full">
+        <h2 id="hits" className="text-gr-h2 text-center font-medium mb-2 scroll-mt-24 underline">
           Hits
         </h2>
+        <img
+          src="/mechanics/hits.webp"
+          alt="Gyro Zeppeli shouting"
+          className="float-left mb-3 mr-4 w-40 border-4 border-black sm:w-52"
+        />
         <p>
           If an Action targeting an enemy succeeds, it will deal a{" "}
           <BIU>Hit</BIU>.
@@ -260,8 +297,11 @@ export default function Mechanics() {
           Reactions only interfere with Actions, they do not create Hits when
           succeeding.
         </p>
+          <div className="clear-both" />
+        </div>
 
-        <h2 id="retirement" className="text-gr-h2 font-medium mb-2 scroll-mt-24 underline">
+        <div className="w-full">
+        <h2 id="retirement" className="text-gr-h2 text-center font-medium mb-2 scroll-mt-24 underline">
           Retirement
         </h2>
         <p>
@@ -277,6 +317,11 @@ export default function Mechanics() {
           The <BI>Speedwagon Effect</BI> allows <I>Retired</I> players to
           continue talking in most scenes.
           <br />
+          <img
+            src="/mechanics/retirement.webp"
+            alt="A panel reading Retired"
+            className="float-right mb-3 ml-4 w-52 border-4 border-black sm:w-72"
+          />
           <IU>Hits & Retirement</IU> are temporary; usually <B>resetting</B>{" "}
           after a fight.
           <br />
@@ -292,6 +337,8 @@ export default function Mechanics() {
           Retired <U>PCs</U> are <I>rarely</I> targeted past <B>0</B>, as they
           pose little threat.
         </p>
+          <div className="clear-both" />
+        </div>
 
         <h2 id="gambits" className="text-gr-h2 font-medium mb-2 scroll-mt-24 underline">
           Gambits
@@ -347,7 +394,13 @@ export default function Mechanics() {
           <I>Triggers</I> happen to line up.
         </p>
 
-        <h2 id="hitLimit" className="text-gr-h2 font-medium mb-2 scroll-mt-24 underline">
+        <div className="w-full">
+        <img
+          src="/mechanics/hit_limit.webp"
+          alt="A silver ribbon marked with blood"
+          className="float-right mb-2 ml-4 w-20 border-4 border-black sm:w-28"
+        />
+        <h2 id="hitLimit" className="text-gr-h2 text-center font-medium mb-2 scroll-mt-24 underline">
           Hit Limit
         </h2>
         <p>
@@ -376,10 +429,18 @@ export default function Mechanics() {
           Healing (<Link to="/character-creation#hamon" className="underline text-link-blue">Hamon</Link>/<Link to="/character-creation#vampire" className="underline text-link-blue">Vampire</Link>)
           only reduces or removes Hits affected by that source.
         </p>
+          <div className="clear-both" />
+        </div>
 
-        <h2 id="dark-determination" className="text-gr-h2 font-medium mb-2 scroll-mt-24 underline">
+        <div className="w-full">
+        <h2 id="dark-determination" className="text-gr-h2 text-center font-medium mb-2 scroll-mt-24 underline">
           Dark Determination
         </h2>
+        <img
+          src="/mechanics/dark_determination.webp"
+          alt="A close-up of intense blue eyes"
+          className="float-left mb-3 mr-4 w-44 border-4 border-red-600 sm:w-56"
+        />
         <p>
           Though Retirement occurs at 0 <IU>Hit Limit</IU> and death occurs at
           -2, there's an exception.
@@ -390,16 +451,20 @@ export default function Mechanics() {
           <br />
           They <I>can't</I> be healed in any way, the next <BI>Hit</BI> will be
           fatal.
-          <br />
-          <br />
+        </p>
+        <div className="clear-both" />
+        <p>
           <IU>Dark Determination</IU> is fueled by an immediate, single-minded{" "}
           <B>obsession</B>.
           <br />
           The User <B>cannot</B> revert to the safety of <I>Retirement</I> until
           the goal is <U>reached</U> or they <U>die</U>.
         </p>
+          <div className="clear-both" />
+        </div>
 
-        <h2 id="turn-order" className="text-gr-h2 font-medium mb-2 scroll-mt-24 underline">
+        <div className="w-full">
+        <h2 id="turn-order" className="text-gr-h2 text-center font-medium mb-2 scroll-mt-24 underline">
           Turn Order
         </h2>
         <p>
@@ -422,6 +487,11 @@ export default function Mechanics() {
           flow, randomly, or rolled.</I>
           <br />
           <br />
+          <img
+            src="/mechanics/turn_order.webp"
+            alt="Four glasses of iced tea lined up in a row"
+            className="float-left mb-2 mr-4 w-52 border-4 border-[#c4a035] sm:w-72"
+          />
           In a 4v4 situation, <I>all</I> characters
           <br />
           get <U>one</U> Turn per Round.
@@ -438,6 +508,8 @@ export default function Mechanics() {
           <br />
           one of the <I>Trio</I> each Round, alternating.
         </p>
+          <div className="clear-both" />
+        </div>
       </div>
     </main>
     </>
