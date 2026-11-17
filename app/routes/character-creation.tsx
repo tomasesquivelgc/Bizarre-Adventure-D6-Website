@@ -33,7 +33,7 @@ export default function CharacterCreation() {
       <div className="mx-auto max-w-7xl">
         <header className="mb-8 max-w-3xl">
           <p className="text-xs font-bold uppercase tracking-[0.12em] text-muted">Player guide</p>
-          <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl">Character Creation</h1>
+          <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">Character Creation</h2>
           <p className="mt-3 text-lg text-muted">
             Build a User, Stand, or alternative character source by choosing stats, abilities, and properties within
             your setting&apos;s point-buy budget.
@@ -55,7 +55,7 @@ export default function CharacterCreation() {
         1-2 points can be moved from one pool to the other.
         Some settings invert them, using the large pool for Users and small pool for Stands.
       </p>
-      <h2 id="point-buy-tiers" className="mt-12 scroll-mt-4 border-t border-fg/18 pt-4 text-xl font-medium max-md:mt-10">Point buy tiers</h2>
+      <h3 id="point-buy-tiers" className="mt-12 scroll-mt-4 border-t border-fg/18 pt-4 text-xl font-medium max-md:mt-10">Point buy tiers</h3>
       <ul className="mb-6 grid list-none gap-0 overflow-hidden rounded-xl border border-fg/14 bg-bg-lt/58 p-0 [&>li]:grid [&>li]:grid-cols-[minmax(7rem,0.7fr)_minmax(7rem,1fr)] [&>li]:items-baseline [&>li]:gap-3 [&>li]:border-b [&>li]:border-fg/12 [&>li]:px-4 [&>li]:py-3 [&>li:last-child]:border-b-0 [&>li>strong]:tabular-nums max-md:[&>li]:grid-cols-[1fr_1fr]" aria-label="Point buy tiers">
         <li><span>Sad</span><strong>12 / 12</strong></li>
         <li><span>Minion</span><strong>15 / 18</strong></li>
@@ -67,7 +67,7 @@ export default function CharacterCreation() {
         <li><span>Fabulous</span><strong>24 / 32</strong></li>
         <li><span>Over Heaven</span><strong>26 / 40</strong></li>
       </ul>
-      <h2 id="bios" className="mt-12 scroll-mt-4 border-t border-fg/18 pt-4 text-xl font-medium max-md:mt-10">Bios</h2>
+      <h3 id="bios" className="mt-12 scroll-mt-4 border-t border-fg/18 pt-4 text-xl font-medium max-md:mt-10">Bios</h3>
       <p>
         Every character has personality traits, history, and a philosophy.
         The Moxie Advantage focuses on this section for its references.
@@ -77,7 +77,7 @@ export default function CharacterCreation() {
         A more detailed Bio will have more chances to justify the Advantage.
         The Bio grows with the character themselves, as events unfold...
       </p>
-      <h2 id="user-stats" className="mt-12 scroll-mt-24 border-t border-fg/18 pt-4 text-xl font-medium max-md:mt-10">User Stats</h2>
+      <h3 id="user-stats" className="mt-12 scroll-mt-24 border-t border-fg/18 pt-4 text-xl font-medium max-md:mt-10">User Stats</h3>
       <ul className="mb-6 grid list-none gap-0 overflow-hidden rounded-xl border border-fg/14 bg-bg-lt/58 p-0 [&>li]:grid [&>li]:grid-cols-[2rem_minmax(8rem,0.8fr)_minmax(0,2fr)] [&>li]:items-baseline [&>li]:gap-3 [&>li]:border-b [&>li]:border-fg/12 [&>li]:px-4 [&>li]:py-3 [&>li:last-child]:border-b-0 [&>li>strong]:tabular-nums max-md:[&>li]:grid-cols-[2rem_1fr] max-md:[&>li_span:last-child]:col-start-2" aria-label="User stat ranks">
         <li><span>E</span><strong>1d6 · 1 point</strong><span>Very weak, possibly handicapped.</span></li>
         <li><span>D</span><strong>2d6 · 2 points</strong><span>Substandard, lacking in that area.</span></li>
@@ -117,7 +117,7 @@ export default function CharacterCreation() {
           Low Luck - Danny, Masazo, Doppio
         </li>
       </ul>
-      <h2 id="stand-stats" className="mt-12 scroll-mt-4 border-t border-fg/18 pt-4 text-xl font-medium max-md:mt-10">Stand Stats</h2>
+      <h3 id="stand-stats" className="mt-12 scroll-mt-4 border-t border-fg/18 pt-4 text-xl font-medium max-md:mt-10">Stand Stats</h3>
       <div>
         <ul>
           <li>
@@ -183,7 +183,7 @@ export default function CharacterCreation() {
           Ø/E/D/C/B/A/∞ = 0/1/2/3/4/5/15 Ranks.
         </p>
       </div>
-      <h2 id="rank-burns" className="mt-12 scroll-mt-4 border-t border-fg/18 pt-4 text-xl font-medium max-md:mt-10">Rank Burns</h2>
+      <h3 id="rank-burns" className="mt-12 scroll-mt-4 border-t border-fg/18 pt-4 text-xl font-medium max-md:mt-10">Rank Burns</h3>
       <p>
         The Luck & Learning Ranks are a consumable resource for boons.
         Luck burns are usually temporary, restored after the session ends.
@@ -224,7 +224,7 @@ export default function CharacterCreation() {
         Adaptive ___ (-X+2 Temp) - Any of the above, but it goes away after the session ends.
         Stand Users only. An Adaptive Invention would cost 5 Temp instead of 3 Permanent.
       </p>
-      <h2 id="range-learning-ranks" className="mt-12 scroll-mt-4 border-t border-fg/18 pt-4 text-xl font-medium max-md:mt-10">Range/Learning Ranks</h2>
+      <h3 id="range-learning-ranks" className="mt-12 scroll-mt-4 border-t border-fg/18 pt-4 text-xl font-medium max-md:mt-10">Range/Learning Ranks</h3>
       <ul>
         <li>E: 1 Rank ~ 2 Meters or below</li>
         <li>D: 2 Ranks ~ 6M</li>
@@ -236,7 +236,7 @@ export default function CharacterCreation() {
             Tiles are 2 meters each. 10 meters = 5 Tiles, while Movement is ~8-12 Tiles.
         </li>
       </ul>
-      <h2 id="properties" className="mt-12 scroll-mt-4 border-t border-fg/18 pt-4 text-xl font-medium max-md:mt-10">Properties</h2>
+      <h3 id="properties" className="mt-12 scroll-mt-4 border-t border-fg/18 pt-4 text-xl font-medium max-md:mt-10">Properties</h3>
       <p>
         Some Stands have unique physiologies or affinities, neither ability nor type. 
         These Properties open the door to otherwise unrealistic actions.
@@ -252,7 +252,7 @@ export default function CharacterCreation() {
         e.g. Justice's fog form, Hierophant Green's barriers.
 
       </p>
-      <h2 id="abilities" className="mt-12 scroll-mt-4 border-t border-fg/18 pt-4 text-xl font-medium max-md:mt-10">Abilities</h2>
+      <h3 id="abilities" className="mt-12 scroll-mt-4 border-t border-fg/18 pt-4 text-xl font-medium max-md:mt-10">Abilities</h3>
       <p>
         Stands have a unique Ability, which bends reality to its will.
         An ideal Ability is esoteric, being very versatile or hyperspecific.
@@ -313,7 +313,7 @@ export default function CharacterCreation() {
           e.g. MiH's ability, GER's ability, TWOH's ability.
         </li>
       </ul>
-      <h2 id="stand-types" className="mt-12 scroll-mt-4 border-t border-fg/18 pt-4 text-xl font-medium max-md:mt-10">Stand Types</h2>
+      <h3 id="stand-types" className="mt-12 scroll-mt-4 border-t border-fg/18 pt-4 text-xl font-medium max-md:mt-10">Stand Types</h3>
       <p>
         Stands fall into a mix of these archetypes.
       </p>
@@ -738,7 +738,7 @@ export default function CharacterCreation() {
         Range = How advanced the Cyborg's Experimental Upgrades are.
         Learning = Resources. How quickly a Cyborg can surpass their limits.
       </p>
-      <h2 id="alternative-source-range-stats" className="mt-12 scroll-mt-4 border-t border-fg/18 pt-4 text-xl font-medium max-md:mt-10">Alternative Source Range Stats</h2>
+      <h3 id="alternative-source-range-stats" className="mt-12 scroll-mt-4 border-t border-fg/18 pt-4 text-xl font-medium max-md:mt-10">Alternative Source Range Stats</h3>
       <ul>
         <li>
           <h3 id="hamon">Hamon</h3>

@@ -78,3 +78,17 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "SF Fedora";
+  src: url("/fonts/sffedora.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@layer base {
+  h2 {
+    font-family: "SF Fedora", ui-sans-serif, system-ui, sans-serif;
+  }
+}
+

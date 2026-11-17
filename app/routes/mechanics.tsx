@@ -64,13 +64,13 @@ export default function Mechanics() {
       />
       <main className="mx-auto md:w-gr-big bg-bg">
       <div className="mx-auto flex flex-q flex-col items-center justify-center px-[9%] py-[5.5%]">
-        <h1 className="text-gr-h1 font-semibold mb-4 underline">
+        <h2 className="text-gr-h1 font-semibold mb-4 underline">
           Mechanics
-        </h1>
-
-        <h2 id="rolling" className="text-gr-h2 font-medium mb-2 scroll-mt-24 underline">
-          Rolling
         </h2>
+
+        <h3 id="rolling" className="text-gr-h2 font-medium mb-2 scroll-mt-24 underline">
+          Rolling
+        </h3>
         <p>
           Each character will have a <U>pool of D6s</U> to roll, when attempting
           to perform an Action. The amount is depicted as Xd6, <B>5d6</B> means{" "}
@@ -93,9 +93,9 @@ export default function Mechanics() {
             alt="Close-up of a six-sided die"
             className="float-left mb-3 mr-4 w-36 border-4 border-black sm:w-44"
           />
-          <h2 id="results" className="text-gr-h2 text-center font-medium mb-2 scroll-mt-24 underline">
+          <h3 id="results" className="text-gr-h2 text-center font-medium mb-2 scroll-mt-24 underline">
             Results
-          </h2>
+          </h3>
           <p>
             When a given D6 is rolled, there are two possibilities.
             <br />
@@ -112,9 +112,9 @@ export default function Mechanics() {
         </div>
 
         <div className="w-full">
-          <h2 id="DC" className="text-gr-h2 text-center font-medium mb-2 scroll-mt-24 underline">
+          <h3 id="DC" className="text-gr-h2 text-center font-medium mb-2 scroll-mt-24 underline">
             DC
-          </h2>
+          </h3>
           <p>
             Rolls have a Difficulty (<BIU>DC</BIU>) assigned by the Narrator.
             <br />A <IU>Sum</IU> of <B>(6)</B> minus a <IU>DC</IU> of <B>(4)</B>{" "}
@@ -137,9 +137,9 @@ export default function Mechanics() {
             opens a new path.
           </p>
 
-          <h2 id="actions" className="text-gr-h2 text-center font-medium mb-2 scroll-mt-24 underline">
+          <h3 id="actions" className="text-gr-h2 text-center font-medium mb-2 scroll-mt-24 underline">
             Actions
-          </h2>
+          </h3>
         <p>
           An <U>Action</U> is what the subject is <B>trying to do on their turn</B>.
           <br />
@@ -178,9 +178,9 @@ export default function Mechanics() {
           <div className="clear-both" />
         </div>
 
-        <h2 id="dual-heat" className="text-gr-h2 font-medium mb-2 scroll-mt-24 underline">
+        <h3 id="dual-heat" className="text-gr-h2 font-medium mb-2 scroll-mt-24 underline">
           Dual Heat
-        </h2>
+        </h3>
         <p>
           <IU>Actions and Reactions</IU> can be <BI>Passed</BI> to an ally
           instead.
@@ -194,9 +194,9 @@ export default function Mechanics() {
           return the favor.
         </p>
 
-        <h2 id="advantage" className="text-gr-h2 font-medium mb-2 scroll-mt-24 underline">
+        <h3 id="advantage" className="text-gr-h2 font-medium mb-2 scroll-mt-24 underline">
           Advantage
-        </h2>
+        </h3>
         <p>
           Actions that <I>embrace JoJo's style</I> can expand the{" "}
           <Link to="#results" className="underline text-link-blue font-bold italic">Live Dice</Link> range by a maximum of 3.
@@ -268,9 +268,9 @@ export default function Mechanics() {
         </div>
 
         <div className="w-full">
-        <h2 id="hits" className="text-gr-h2 text-center font-medium mb-2 scroll-mt-24 underline">
+        <h3 id="hits" className="text-gr-h2 text-center font-medium mb-2 scroll-mt-24 underline">
           Hits
-        </h2>
+        </h3>
         <img
           src="/mechanics/hits.webp"
           alt="Gyro Zeppeli shouting"
@@ -301,9 +301,9 @@ export default function Mechanics() {
         </div>
 
         <div className="w-full">
-        <h2 id="retirement" className="text-gr-h2 text-center font-medium mb-2 scroll-mt-24 underline">
+        <h3 id="retirement" className="text-gr-h2 text-center font-medium mb-2 scroll-mt-24 underline">
           Retirement
-        </h2>
+        </h3>
         <p>
           A character can only take so many <I>Hits</I> before being{" "}
           <BI>Retired</BI>.
@@ -340,9 +340,9 @@ export default function Mechanics() {
           <div className="clear-both" />
         </div>
 
-        <h2 id="gambits" className="text-gr-h2 font-medium mb-2 scroll-mt-24 underline">
+        <h3 id="gambits" className="text-gr-h2 font-medium mb-2 scroll-mt-24 underline">
           Gambits
-        </h2>
+        </h3>
         <p>
           During a contest, a <BI>Gambit</BI> may be placed together with the
           Action during your turn.
@@ -400,9 +400,9 @@ export default function Mechanics() {
           alt="A silver ribbon marked with blood"
           className="float-right mb-2 ml-4 w-20 border-4 border-black sm:w-28"
         />
-        <h2 id="hitLimit" className="text-gr-h2 text-center font-medium mb-2 scroll-mt-24 underline">
+        <h3 id="hitLimit" className="text-gr-h2 text-center font-medium mb-2 scroll-mt-24 underline">
           Hit Limit
-        </h2>
+        </h3>
         <p>
           The <BIU>Hit Limit</BIU> is a form of HP, determined by the
           character's <U>role</U>.
@@ -433,9 +433,9 @@ export default function Mechanics() {
         </div>
 
         <div className="w-full">
-        <h2 id="dark-determination" className="text-gr-h2 text-center font-medium mb-2 scroll-mt-24 underline">
+        <h3 id="dark-determination" className="text-gr-h2 text-center font-medium mb-2 scroll-mt-24 underline">
           Dark Determination
-        </h2>
+        </h3>
         <img
           src="/mechanics/dark_determination.webp"
           alt="A close-up of intense blue eyes"
@@ -464,9 +464,9 @@ export default function Mechanics() {
         </div>
 
         <div className="w-full">
-        <h2 id="turn-order" className="text-gr-h2 text-center font-medium mb-2 scroll-mt-24 underline">
+        <h3 id="turn-order" className="text-gr-h2 text-center font-medium mb-2 scroll-mt-24 underline">
           Turn Order
-        </h2>
+        </h3>
         <p>
           Every <I>Action</I> has a <I>Turn</I> for its execution.
           <br />

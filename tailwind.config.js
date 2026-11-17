@@ -29,6 +29,12 @@ export default {
           "Arial",
           "sans-serif",
         ],
+        "sf-fedora": [
+          '"SF Fedora"',
+          "ui-sans-serif",
+          "system-ui",
+          "sans-serif",
+        ],
         "josefin-slab": [
           '"Josefin Slab"',
           "ui-serif",

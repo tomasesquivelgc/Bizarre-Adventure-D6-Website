@@ -54,7 +54,7 @@ export function Welcome() {
               The television adaptation can be viewed on Crunchyroll <a href="http://www.crunchyroll.com/jojos-bizarre-adventure" className="underline text-link-blue">here</a>, or pirated on nyaa.si
             </p>
           </div>
-          <h2 className="text-gr-h2 pt-10">Needed Materials</h2>
+          <h3 className="text-gr-h2 pt-10">Needed Materials</h3>
           <div className="flex w-full">
             <p>
               A handful of <span className="underline">six-sided dice</span> <span className="font-bold underline">(D6)</span> to roll when needed.
