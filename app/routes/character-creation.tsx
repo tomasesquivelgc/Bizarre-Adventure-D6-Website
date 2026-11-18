@@ -29,18 +29,12 @@ export default function CharacterCreation() {
         ariaLabel="Character creation sections"
         className="z-40 mx-auto mb-4 w-[calc(100%-2rem)] rounded-xl border border-fg/14 bg-bg-lt/72 p-4 md:w-gr-big lg:fixed lg:top-24 lg:left-[max(0.5rem,calc(19.1%-12.25rem))] lg:mb-0 lg:max-h-[calc(100vh-7rem)] lg:w-[11.25rem] lg:overflow-y-auto [&_a]:rounded-md [&_a]:px-2 [&_a]:py-1.5 [&_a]:text-sm [&_a]:text-fg [&_a]:no-underline [&_a:hover]:bg-bg-hl [&_a:focus-visible]:bg-bg-hl [&_a:focus-visible]:outline-none [&_nav]:grid [&_nav]:gap-0.5 max-lg:[&_nav]:grid-cols-2"
       />
-      <main id="character-content" className="mx-auto md:w-gr-big bg-bg px-4 pb-16 pt-16 leading-[1.7]">
-      <div className="mx-auto max-w-7xl">
-        <header className="mb-8 max-w-3xl">
-          <p className="text-xs font-bold uppercase tracking-[0.12em] text-muted">Player guide</p>
-          <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">Character Creation</h2>
-          <p className="mt-3 text-lg text-muted">
-            Build a User, Stand, or alternative character source by choosing stats, abilities, and properties within
-            your setting&apos;s point-buy budget.
-          </p>
-        </header>
-
-          <div className="min-w-0 [&_p]:mb-5 [&_p]:whitespace-pre-line [&_li]:whitespace-pre-line [&_ul]:mb-6 [&_ul]:grid [&_ul]:gap-3 [&_ul]:pl-5 [&_li::marker]:text-brand [&_ul_ul]:mt-3">
+      <main id="character-content" className="mx-auto md:w-gr-big bg-bg pb-16 leading-[1.7]">
+        <div className="w-full bg-bg-brown px-[9%]">
+          <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl text-right">Character Creation</h2>
+        </div>
+      <div className="mx-auto max-w-7xl px-[9%]">
+        <div className="min-w-0 [&_p]:mb-5 [&_p]:whitespace-pre-line [&_li]:whitespace-pre-line [&_ul]:mb-6 [&_ul]:grid [&_ul]:gap-3 [&_ul]:pl-5 [&_li::marker]:text-brand [&_ul_ul]:mt-3">
       <p>
         Stats determine the dice pool for their uses, and are different for Users and Stands.
         Each Stat has a rank from E to A, with niche instances of Ø (Always Failure), ∞ (10d6), and S (Special/Other, is not an A+)

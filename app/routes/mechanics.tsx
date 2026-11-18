@@ -63,11 +63,12 @@ export default function Mechanics() {
         className="z-40 mx-auto mb-4 w-[calc(100%-2rem)] rounded-xl border border-fg/14 bg-bg-lt/72 p-4 md:w-gr-big lg:fixed lg:top-24 lg:left-[max(0.5rem,calc(19.1%-12.25rem))] lg:mb-0 lg:w-[11.25rem] [&_a]:rounded-md [&_a]:px-2 [&_a]:py-1.5 [&_a]:text-sm [&_a]:text-fg [&_a]:no-underline [&_a:hover]:bg-bg-hl [&_a:focus-visible]:bg-bg-hl [&_a:focus-visible]:outline-none [&_nav]:grid [&_nav]:gap-0.5 max-lg:[&_nav]:grid-cols-2"
       />
       <main className="mx-auto md:w-gr-big bg-bg">
-      <div className="mx-auto flex flex-q flex-col items-center justify-center px-[9%] py-[5.5%]">
-        <h2 className="text-gr-h1 font-semibold mb-4 underline">
+        <div className="w-full bg-bg-green px-[9%]">
+          <h2 className="text-gr-h1 font-semibold mb-4 underline text-right">
           Mechanics
         </h2>
-
+        </div>
+      <div className="mx-auto flex flex-q flex-col items-center justify-center px-[9%] py-[5.5%]"> 
         <h3 id="rolling" className="text-gr-h2 font-medium mb-2 scroll-mt-24 underline">
           Rolling
         </h3>
