@@ -5,7 +5,7 @@ import { NavLink } from "react-router";
 import { applyTheme, readAppliedTheme, type Theme } from "../theme";
 
 const navLinkClassName =
-  "rounded-md px-3 py-2 text-lg  text-white hover:bg-white/10 transition-colors md:inline-flex md:items-center font-md";
+  "rounded-md px-3 py-2 text-lg  text-white hover:bg-white/10 transition-colors md:inline-flex md:items-center font-medium";
 
 function ThemeToggle() {
   function toggleTheme() {
@@ -72,16 +72,16 @@ export default function Nav() {
         <div className="hidden items-center gap-2 md:flex">
           <nav className="flex items-center gap-2">
             <NavLink to="/" className={navLinkClassName} onClick={() => setOpen(false)}>
-              Home
+              HOME
             </NavLink>
             <NavLink to="/mechanics" className={navLinkClassName} onClick={() => setOpen(false)}>
-              Mechanics
+              MECHANICS
             </NavLink>
             <NavLink to="/character-creation" className={navLinkClassName} onClick={() => setOpen(false)}>
-              Character Creation
+              CHARACTER CREATION
             </NavLink>
             <NavLink to="/resources" className={navLinkClassName} onClick={() => setOpen(false)}>
-              Resources
+              RESOURCES
             </NavLink>
           </nav>
           <ThemeToggle />
@@ -104,16 +104,16 @@ export default function Nav() {
             <nav className="absolute right-0 top-full border border-white/10 bg-black">
               <div className="w-max space-y-2 p-4">
                 <NavLink to="/" className={`block ${navLinkClassName}`} onClick={() => setOpen(false)}>
-                  Home
+                  HOME
                 </NavLink>
                 <NavLink to="/mechanics" className={`block ${navLinkClassName}`} onClick={() => setOpen(false)}>
-                  Mechanics
+                  MECHANICS
                 </NavLink>
                 <NavLink to="/character-creation" className={`block ${navLinkClassName}`} onClick={() => setOpen(false)}>
-                  Character Creation
+                  CHARACTER CREATION
                 </NavLink>
                 <NavLink to="/resources" className={`block ${navLinkClassName}`} onClick={() => setOpen(false)}>
-                  Resources
+                  RESOURCES
                 </NavLink>
               </div>
             </nav>

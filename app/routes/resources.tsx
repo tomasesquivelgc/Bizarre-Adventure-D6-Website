@@ -7,10 +7,10 @@ export function meta({}: Route.MetaArgs) {
 export default function Resources() {
   return (
     <main className="mx-auto md:w-gr-big bg-bg pb-16 leading-[1.7] [&_a]:font-[650] [&_a]:text-fg [&_a]:decoration-[0.1em] [&_a]:underline-offset-[0.18em] [&_a:hover]:bg-bg-hl/72 [&_a:hover]:text-fg [&_a:hover]:outline [&_a:hover]:outline-2 [&_a:hover]:outline-fg/45 [&_a:hover]:outline-offset-2 [&_a:focus-visible]:bg-bg-hl/72 [&_a:focus-visible]:text-fg [&_a:focus-visible]:outline [&_a:focus-visible]:outline-2 [&_a:focus-visible]:outline-fg/45 [&_a:focus-visible]:outline-offset-2 [&_p]:mb-5 [&_p]:whitespace-pre-line [&_li::marker]:text-brand [&_ul]:mb-6 [&_ul]:grid [&_ul]:gap-2 [&_ul]:pl-5">
-      <div className="w-full bg-bg-pink px-[9%]">
-        <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl text-right">Resources</h2>
+      <div className="w-full bg-bg-pink px-10">
+        <h2 className="text-gr-h1 text-right">Resources</h2>
       </div>
-      <div className="mx-auto max-w-7xl px-[9%]">
+      <div className="mx-auto max-w-7xl px-10">
 
         <div className="grid gap-6 md:grid-cols-2 max-md:grid-cols-1">
           <section id="example-user" className="min-w-0 overflow-hidden rounded-[0.875rem] border border-fg/14 bg-bg-lt/58">

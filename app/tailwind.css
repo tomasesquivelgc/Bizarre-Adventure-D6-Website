@@ -9,7 +9,7 @@
   --theme-fg: #1c1917;
   --theme-muted: #57534e;
   --theme-brand: #2458a6;
-  --theme-bg-purple: #d9def3;
+  --theme-bg-purple: #2e3872;
   --theme-bg-green: #2da69f;
   --theme-bg-brown: #866910;
   --theme-bg-pink: #ac3579;
@@ -98,7 +98,8 @@
 @layer base {
   h2 {
     font-family: "SF Fedora", ui-sans-serif, system-ui, sans-serif;
-    /*@apply tracking-tight bg-linear-to-b from-jojo-pink via-jojo-rose to-white bg-clip-text text-transparent [-webkit-text-stroke:2px_black];*/
+    @apply tracking-tight /*bg-linear-to-b from-jojo-pink via-jojo-rose to-white bg-clip-text text-transparent*/ [-webkit-text-stroke:2px_black];
+    color: white;
   }
 }
 

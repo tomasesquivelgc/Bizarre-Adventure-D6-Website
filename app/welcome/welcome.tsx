@@ -17,13 +17,13 @@ export function Welcome() {
 
       {/* Main content remains constrained and centered */}
       <main className="mx-auto flex flex-1 flex-col bg-bg pb-4 md:w-gr-big">
-      <div className="w-full bg-bg-purple px-[9%]">
-        <h2 className="w-full text-center text-gr-h1">
+      <div className="w-full bg-bg-purple px-4">
+        <h2 className="w-full text-center text-gr-h1 bold italic">
           What Is This?
         </h2>
       </div>
       
-        <div className="mx-auto flex flex-q flex-col items-center justify-center px-[9%]">
+        <div className="mx-auto flex flex-q flex-col items-center justify-center px-10">
           
           <div className="flex gap-2">
             <p>
