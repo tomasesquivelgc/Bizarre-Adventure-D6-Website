@@ -89,6 +89,7 @@
 @layer base {
   h2 {
     font-family: "SF Fedora", ui-sans-serif, system-ui, sans-serif;
+    @apply tracking-tight bg-linear-to-b from-jojo-pink via-jojo-rose to-white bg-clip-text text-transparent [-webkit-text-stroke:2px_black];
   }
 }
 
