@@ -9,12 +9,12 @@ export default function Resources() {
     <main className="mx-auto md:w-gr-big bg-bg px-4 pb-16 pt-16 leading-[1.7] [&_a]:font-[650] [&_a]:text-fg [&_a]:decoration-[0.1em] [&_a]:underline-offset-[0.18em] [&_a:hover]:bg-bg-hl/72 [&_a:hover]:text-fg [&_a:hover]:outline [&_a:hover]:outline-2 [&_a:hover]:outline-fg/45 [&_a:hover]:outline-offset-2 [&_a:focus-visible]:bg-bg-hl/72 [&_a:focus-visible]:text-fg [&_a:focus-visible]:outline [&_a:focus-visible]:outline-2 [&_a:focus-visible]:outline-fg/45 [&_a:focus-visible]:outline-offset-2 [&_p]:mb-5 [&_p]:whitespace-pre-line [&_li::marker]:text-brand [&_ul]:mb-6 [&_ul]:grid [&_ul]:gap-2 [&_ul]:pl-5">
       <div className="mx-auto max-w-7xl">
         <header className="mb-8 border-b border-fg/18 pb-4">
-          <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl">「Resources」</h1>
+          <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">「Resources」</h2>
         </header>
 
         <div className="grid gap-6 md:grid-cols-2 max-md:grid-cols-1">
           <section id="example-user" className="min-w-0 overflow-hidden rounded-[0.875rem] border border-fg/14 bg-bg-lt/58">
-          <h2 className="border-b border-fg/12 bg-bg-hl/55 px-5 py-4 text-xl font-[650] tracking-[-0.01em]">Example User</h2>
+          <h3 className="border-b border-fg/12 bg-bg-hl/55 px-5 py-4 text-xl font-[650] tracking-[-0.01em]">Example User</h3>
           <div className="p-5 max-md:p-4 [&_h3]:my-2 [&_h3]:mt-6 [&_h3]:text-base [&_h3]:font-bold [&_h3:first-child]:mt-0">
           <h3>Bio & Info Tab</h3>
       <p>
@@ -51,7 +51,7 @@ export default function Resources() {
           </section>
 
           <section id="example-stand" className="min-w-0 overflow-hidden rounded-[0.875rem] border border-fg/14 bg-bg-lt/58">
-      <h2 className="border-b border-fg/12 bg-bg-hl/55 px-5 py-4 text-xl font-[650] tracking-[-0.01em]">Example Stand</h2>
+      <h3 className="border-b border-fg/12 bg-bg-hl/55 px-5 py-4 text-xl font-[650] tracking-[-0.01em]">Example Stand</h3>
       <div className="p-5 max-md:p-4 [&_h3]:my-2 [&_h3]:mt-6 [&_h3]:text-base [&_h3]:font-bold [&_h3:first-child]:mt-0 [&>a]:mt-[-0.5rem] [&>a]:inline-block">
       <h3>Bio & Info Tab</h3>
       <p>
@@ -85,7 +85,7 @@ export default function Resources() {
         </div>
 
         <section id="additional-links" className="mt-12 scroll-mt-4 max-md:mt-10">
-      <h2 className="border-t border-fg/18 pt-4 text-xl font-[650] tracking-[-0.01em]">Additional Links</h2>
+      <h3 className="border-t border-fg/18 pt-4 text-xl font-[650] tracking-[-0.01em]">Additional Links</h3>
       <div className="grid gap-4 md:grid-cols-2 max-md:grid-cols-1">
       <section className="rounded-[0.875rem] border border-fg/14 bg-bg-lt/58 p-5 max-md:p-4 [&_h3]:mt-0">
       <h3>For Character Sheets</h3>
