@@ -5,7 +5,28 @@ import { NavLink } from "react-router";
 import { applyTheme, readAppliedTheme, type Theme } from "../theme";
 
 const navLinkClassName =
-  "rounded-md px-3 py-2 text-lg  text-white hover:bg-white/10 transition-colors md:inline-flex md:items-center font-medium";
+  "rounded-md px-2 py-1 text-lg text-white hover:bg-white/10 transition-colors inline-flex items-center justify-center font-medium text-center leading-tight";
+
+const links = [
+  { to: "/", label: "HOME" },
+  { to: "/mechanics", label: "MECHANICS" },
+  { to: "/mechanic-examples", label: "MECHANIC EXAMPLES" },
+  { to: "/character-creation", label: "CHARACTER CREATION" },
+  { to: "/resources", label: "RESOURCES" },
+] as const;
+
+function StackedLabel({ label }: { label: string }) {
+  const words = label.split(" ");
+  if (words.length === 1) return <>{label}</>;
+
+  return (
+    <span className="inline-flex flex-col items-center">
+      {words.map((word) => (
+        <span key={word}>{word}</span>
+      ))}
+    </span>
+  );
+}
 
 function ThemeToggle() {
   function toggleTheme() {
@@ -69,23 +90,24 @@ export default function Nav() {
           </NavLink>
         </h1>
 
-        <div className="hidden items-center gap-2 md:flex">
-          <nav className="flex items-center gap-2">
-            <NavLink to="/" className={navLinkClassName} onClick={() => setOpen(false)}>
-              HOME
-            </NavLink>
-            <NavLink to="/mechanics" className={navLinkClassName} onClick={() => setOpen(false)}>
-              MECHANICS
-            </NavLink>
-            <NavLink to="/mechanic-examples" className={navLinkClassName} onClick={() => setOpen(false)}>
-              MECHANIC EXAMPLES
-            </NavLink>
-            <NavLink to="/character-creation" className={navLinkClassName} onClick={() => setOpen(false)}>
-              CHARACTER CREATION
-            </NavLink>
-            <NavLink to="/resources" className={navLinkClassName} onClick={() => setOpen(false)}>
-              RESOURCES
-            </NavLink>
+        <div className="hidden items-center gap-1 md:flex">
+          <nav className="flex items-center gap-1">
+            {links.map((link, index) => (
+              <React.Fragment key={link.to}>
+                {index > 0 && (
+                  <span className="select-none px-1 text-lg text-white/55" aria-hidden="true">
+                    /
+                  </span>
+                )}
+                <NavLink
+                  to={link.to}
+                  className={navLinkClassName}
+                  onClick={() => setOpen(false)}
+                >
+                  <StackedLabel label={link.label} />
+                </NavLink>
+              </React.Fragment>
+            ))}
           </nav>
           <ThemeToggle />
         </div>
@@ -105,22 +127,26 @@ export default function Nav() {
 
           {open && (
             <nav className="absolute right-0 top-full border border-white/10 bg-black">
-              <div className="w-max space-y-2 p-4">
-                <NavLink to="/" className={`block ${navLinkClassName}`} onClick={() => setOpen(false)}>
-                  HOME
-                </NavLink>
-                <NavLink to="/mechanics" className={`block ${navLinkClassName}`} onClick={() => setOpen(false)}>
-                  MECHANICS
-                </NavLink>
-                <NavLink to="/mechanic-examples" className={`block ${navLinkClassName}`} onClick={() => setOpen(false)}>
-                  MECHANIC EXAMPLES
-                </NavLink>
-                <NavLink to="/character-creation" className={`block ${navLinkClassName}`} onClick={() => setOpen(false)}>
-                  CHARACTER CREATION
-                </NavLink>
-                <NavLink to="/resources" className={`block ${navLinkClassName}`} onClick={() => setOpen(false)}>
-                  RESOURCES
-                </NavLink>
+              <div className="flex w-max flex-col items-stretch p-4">
+                {links.map((link, index) => (
+                  <React.Fragment key={link.to}>
+                    {index > 0 && (
+                      <span
+                        className="select-none py-1 text-center text-lg text-white/55"
+                        aria-hidden="true"
+                      >
+                        /
+                      </span>
+                    )}
+                    <NavLink
+                      to={link.to}
+                      className={`block ${navLinkClassName}`}
+                      onClick={() => setOpen(false)}
+                    >
+                      <StackedLabel label={link.label} />
+                    </NavLink>
+                  </React.Fragment>
+                ))}
               </div>
             </nav>
           )}
