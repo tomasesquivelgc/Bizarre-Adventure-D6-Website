@@ -1,87 +1,67 @@
-# Welcome to React Router!
+# Bizarre Adventures D6 (BAD6)
 
-A modern, production-ready template for building full-stack React applications using React Router.
+A companion website for **Bizarre Adventures D6**, a tabletop RPG system inspired by *JoJo's Bizarre Adventure*. Like a D&D-style game, players create characters (PCs) and drive the story together, while a Narrator (GM) runs the world, NPCs, and rulings.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
+The core fantasy is the **Stand User**: someone who manifests their soul as a Stand with its own Ability, Typing, and Properties. Stands and Users share damage and senses, are usually only visible or harmable by other Stand Users, and are strongest when close to their User — with plenty of room for exceptions at the table.
 
-## Features
+## What you need to play
 
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
+- A handful of six-sided dice (**D6**)
+- Pencil and paper for stats and maps
+- Or online tools like [Roll20](https://roll20.net/) / [Foundry VTT](https://foundryvtt.com/)
 
-## Getting Started
+Community and source material:
 
-### Installation
+- [BAD6 Discord](https://discordapp.com/invite/2QVASDt)
+- [Changelog](https://docs.google.com/document/d/17T32edqs6SqHV7KYUpTuskYgDnnvjfjzvmJ_PGfKvUQ/view)
+- [Rulebook v.0.75b](https://docs.google.com/document/d/1SfNOul18JrU_dAcTkiIVmvdY3tsSowobP-KP9EiIers/view)
 
-Install the dependencies:
+## Site pages
+
+| Route | Description |
+| --- | --- |
+| `/` | Introduction and what BAD6 is |
+| `/mechanics` | Core rules: rolling, DC, actions, hits, gambits, turn order, and more |
+| `/mechanic-examples` | Worked examples, reference tables, and stat combo chart |
+| `/character-creation` | Building Users, Stands, stats, abilities, and alternatives |
+| `/resources` | Example sheets and useful external links |
+
+## Tech stack
+
+- [React Router](https://reactrouter.com/) (Framework Mode)
+- React 19 + TypeScript
+- Tailwind CSS v4
+- Vite
+
+## Getting started
 
 ```bash
 npm install
-```
-
-### Development
-
-Start the development server with HMR:
-
-```bash
 npm run dev
 ```
 
-Your application will be available at `http://localhost:5173`.
+App runs at `http://localhost:5173`.
 
-## Building for Production
-
-Create a production build:
+### Other scripts
 
 ```bash
-npm run build
+npm run build      # production build
+npm start          # serve the production build
+npm run typecheck  # generate route types + TypeScript check
 ```
 
-## Deployment
-
-### Docker Deployment
-
-To build and run using Docker:
-
-```bash
-docker build -t my-app .
-
-# Run the container
-docker run -p 3000:3000 my-app
-```
-
-The containerized application can be deployed to any platform that supports Docker, including:
-
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
-
-### DIY Deployment
-
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
+## Project layout
 
 ```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
+app/
+  routes/          # page modules (home, mechanics, character creation, …)
+  components/      # shared UI (e.g. On This Page)
+  nav/             # site header / navigation
+  welcome/         # home page content
+  tailwind.css     # theme tokens, fonts, global styles
+public/            # static assets (banner, logos, mechanics art, fonts)
 ```
 
-## Styling
+## License / attribution
 
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
-
----
-
-Built with ❤️ using React Router.
+BAD6 is a fan tabletop system inspired by *JoJo's Bizarre Adventure*. This site presents the rules for play; the Narrator remains the final arbiter at their table.
