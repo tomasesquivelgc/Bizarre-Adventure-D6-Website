@@ -77,6 +77,9 @@ export default function Nav() {
             <NavLink to="/mechanics" className={navLinkClassName} onClick={() => setOpen(false)}>
               MECHANICS
             </NavLink>
+            <NavLink to="/mechanic-examples" className={navLinkClassName} onClick={() => setOpen(false)}>
+              MECHANIC EXAMPLES
+            </NavLink>
             <NavLink to="/character-creation" className={navLinkClassName} onClick={() => setOpen(false)}>
               CHARACTER CREATION
             </NavLink>
@@ -108,6 +111,9 @@ export default function Nav() {
                 </NavLink>
                 <NavLink to="/mechanics" className={`block ${navLinkClassName}`} onClick={() => setOpen(false)}>
                   MECHANICS
+                </NavLink>
+                <NavLink to="/mechanic-examples" className={`block ${navLinkClassName}`} onClick={() => setOpen(false)}>
+                  MECHANIC EXAMPLES
                 </NavLink>
                 <NavLink to="/character-creation" className={`block ${navLinkClassName}`} onClick={() => setOpen(false)}>
                   CHARACTER CREATION
