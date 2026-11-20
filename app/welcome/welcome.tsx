@@ -23,7 +23,7 @@ export function Welcome() {
           </h2>
         </div>
 
-        <div className="mx-auto flex w-full flex-col items-center justify-center px-10 pt-8">
+        <div className="mx-auto flex w-full flex-col items-center justify-center px-4 md:px-[9%] pt-8">
           <div className="flex w-full flex-col gap-6 leading-[1.7]">
             <p>
               A <span className="italic">Tabletop RPG System</span>, made with the intention of emulating <span className="underline">JoJo&apos;s Bizarre Adventure,</span> a popular Manga and Anime series.
