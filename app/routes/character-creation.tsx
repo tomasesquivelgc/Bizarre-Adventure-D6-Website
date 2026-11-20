@@ -1,4 +1,5 @@
 import type { Route } from "./+types/home";
+import { Link } from "react-router";
 import { OnThisPage } from "../components/OnThisPage";
 
 export function meta({}: Route.MetaArgs) {
@@ -62,15 +63,23 @@ export default function CharacterCreation() {
         <li><span>Over Heaven</span><strong>26 / 40</strong></li>
       </ul>
       <h3 id="bios" className="mt-12 scroll-mt-4 border-t border-fg/18 pt-4 text-xl font-medium max-md:mt-10">Bios</h3>
-      <p>
-        Every character has personality traits, history, and a philosophy.
-        The Moxie Advantage focuses on this section for its references.
+      <div>
+        <img
+          src="/character_creation/bios.webp"
+          alt="Two manga panels contrasting a glamorous pose with a disheveled one"
+          className="mb-4 block w-full max-w-sm border-4 border-black lg:float-right lg:mb-3 lg:ml-4 lg:w-80 lg:max-w-none"
+        />
+        <p>
+          Every character has personality traits, history, and a philosophy.
+          The Moxie Advantage focuses on this section for its references.
 
-        A backstory, traits, bubble map, art, anything you can point at.
-        One can put in as much or as little detail as they desire.
-        A more detailed Bio will have more chances to justify the Advantage.
-        The Bio grows with the character themselves, as events unfold...
-      </p>
+          A backstory, traits, bubble map, art, anything you can point at.
+          One can put in as much or as little detail as they desire.
+          A more detailed Bio will have more chances to justify the Advantage.
+          The Bio grows with the character themselves, as events unfold...
+        </p>
+        <div className="clear-both" />
+      </div>
       <h3 id="user-stats" className="mt-12 scroll-mt-24 border-t border-fg/18 pt-4 text-xl font-medium max-md:mt-10">User Stats</h3>
       <ul className="mb-6 grid list-none gap-0 overflow-hidden rounded-xl border border-fg/14 bg-bg-lt/58 p-0 [&>li]:grid [&>li]:grid-cols-[2rem_minmax(8rem,0.8fr)_minmax(0,2fr)] [&>li]:items-baseline [&>li]:gap-3 [&>li]:border-b [&>li]:border-fg/12 [&>li]:px-4 [&>li]:py-3 [&>li:last-child]:border-b-0 [&>li>strong]:tabular-nums max-md:[&>li]:grid-cols-[2rem_1fr] max-md:[&>li_span:last-child]:col-start-2" aria-label="User stat ranks">
         <li><span>E</span><strong>1d6 · 1 point</strong><span>Very weak, possibly handicapped.</span></li>
@@ -79,36 +88,90 @@ export default function CharacterCreation() {
         <li><span>B</span><strong>4d6 · 4 points</strong><span>Adept, and it shows.</span></li>
         <li><span>A</span><strong>5d6 · 5 points</strong><span>Talented, in a league of their own.</span></li>
       </ul>
-      <ul>
-        <li>
-          Body - Physical fitness. Stamina, strength, & control.
-          High Body - Lisa Lisa, Forever, Tarkus
-          Low Body - Reimi, Coco Jumbo, Emporio
+      <ul className="list-none !grid-cols-1 !pl-0">
+        <li className="flex items-start gap-4">
+          <img
+            src="/character_creation/body.webp"
+            alt="Kakyoin punching through an opponent"
+            className="w-24 shrink-0 border-4 border-black sm:w-32"
+          />
+          <span>
+            Body - Physical fitness. Stamina, strength, & control.
+            <br />
+            High Body - Lisa Lisa, Forever, Tarkus
+            <br />
+            Low Body - Reimi, Coco Jumbo, Emporio
+          </span>
         </li>
-        <li>
-          Wit - Quick & lateral thinking. Acuity, reflex, & intuition.
-          High Wit - Joseph, D'Arby, Jolyne
-          Low Wit - Whammu, Mista, Foo Fighters
+        <li className="flex items-start gap-4">
+          <img
+            src="/character_creation/wit.webp"
+            alt="Kakyoin lowering his sunglasses"
+            className="w-24 shrink-0 border-4 border-black sm:w-32"
+          />
+          <span>
+            Wit - Quick & lateral thinking. Acuity, reflex, & intuition.
+            <br />
+            High Wit - Joseph, D'Arby, Jolyne
+            <br />
+            Low Wit - Whammu, Mista, Foo Fighters
+          </span>
         </li>
-        <li>
-          Reason - Deep & critical thinking. Judgment, education, & deduction.
-          High Reason - Risotto, Gyro, Gappy
-          Low Reason  - Okuyasu, Narancia, Arabia Fats
+        <li className="flex items-start gap-4">
+          <img
+            src="/character_creation/reason.webp"
+            alt="An arm with Baby Stand written on it"
+            className="w-24 shrink-0 border-4 border-black sm:w-32"
+          />
+          <span>
+            Reason - Deep & critical thinking. Judgment, education, & deduction.
+            <br />
+            High Reason - Risotto, Gyro, Gappy
+            <br />
+            Low Reason - Okuyasu, Narancia, Arabia Fats
+          </span>
         </li>
-        <li>
-          Menacing - Force of personality. Manipulation, empathy, & fabulousness.
-          High Menacing - DIO, Josuke, Bucciarati
-          Low Menacing - Joshu, Shigechi, Abbacchio
+        <li className="flex items-start gap-4">
+          <img
+            src="/character_creation/menacing.webp"
+            alt="Kakyoin with a cherry on his tongue"
+            className="w-24 shrink-0 border-4 border-black sm:w-32"
+          />
+          <span>
+            Menacing - Force of personality. Manipulation, empathy, & fabulousness.
+            <br />
+            High Menacing - DIO, Josuke, Bucciarati
+            <br />
+            Low Menacing - Joshu, Shigechi, Abbacchio
+          </span>
         </li>
-        <li>
-          Pluck - Fighting spirit. Resolve, inspiration, & composure.
-          High Pluck - Jonathan, Giorno, Pesci
-          Low Pluck - Hol Horse, Akira, Ghiaccio
+        <li className="flex items-start gap-4">
+          <img
+            src="/character_creation/pluck.webp"
+            alt="A bloodied Kakyoin glaring forward"
+            className="w-24 shrink-0 border-4 border-black sm:w-32"
+          />
+          <span>
+            Pluck - Fighting spirit. Resolve, inspiration, & composure.
+            <br />
+            High Pluck - Jonathan, Giorno, Pesci
+            <br />
+            Low Pluck - Hol Horse, Akira, Ghiaccio
+          </span>
         </li>
-        <li>
-          Luck - Narrative bargaining chips. Can be burnt for various nudges.
-          High Luck - Dio Brando, Joestar Family, Diavolo
-          Low Luck - Danny, Masazo, Doppio
+        <li className="flex items-start gap-4">
+          <img
+            src="/character_creation/luck.webp"
+            alt="Kakyoin playing a video game"
+            className="w-24 shrink-0 border-4 border-black sm:w-32"
+          />
+          <span>
+            Luck - Narrative bargaining chips. Can be burnt for various nudges.
+            <br />
+            High Luck - Dio Brando, Joestar Family, Diavolo
+            <br />
+            Low Luck - Danny, Masazo, Doppio
+          </span>
         </li>
       </ul>
       <h3 id="stand-stats" className="mt-12 scroll-mt-4 border-t border-fg/18 pt-4 text-xl font-medium max-md:mt-10">Stand Stats</h3>
@@ -141,35 +204,90 @@ export default function CharacterCreation() {
           </li>
         </ul>
 
-        <ul>
-          <li>
-            Power - The Stand's destructive potential & defense bypassing.
-            High Power - Cream, Killer Queen, Green Day
-            Low Power - C-Moon, Pearl Jam, California King Bed
+        <ul className="list-none !grid-cols-1 !pl-0">
+          <li className="flex items-start gap-4">
+            <img
+              src="/character_creation/power.webp"
+              alt="Green emeralds bursting outward"
+              className="w-24 shrink-0 border-4 border-black sm:w-32"
+            />
+            <span>
+              Power - The Stand's destructive potential & defense bypassing.
+              <br />
+              High Power - Cream, Killer Queen, Green Day
+              <br />
+              Low Power - C-Moon, Pearl Jam, California King Bed
+            </span>
           </li>
-          <li>
-            Speed - The Stand's alacrity & activation rate.
-            High Speed - Silver Chariot, Black Sabbath, Ball Breaker
-            Low Speed - Empress, Grateful Dead, Survivor
+          <li className="flex items-start gap-4">
+            <img
+              src="/character_creation/speed.webp"
+              alt="A stand firing a spread of projectiles"
+              className="w-24 shrink-0 border-4 border-black sm:w-32"
+            />
+            <span>
+              Speed - The Stand's alacrity & activation rate.
+              <br />
+              High Speed - Silver Chariot, Black Sabbath, Ball Breaker
+              <br />
+              Low Speed - Empress, Grateful Dead, Survivor
+            </span>
           </li>
-          <li>
-            Range - The Stand's maximum effective distance from the User.
-            High Range - Lovers, Harvest, Highway Star
-            Low Range - Anubis, Cheap Trick, Diver Down
+          <li className="flex items-start gap-4">
+            <img
+              src="/character_creation/range.webp"
+              alt="Highway Star racing alongside a car"
+              className="w-24 shrink-0 border-4 border-black sm:w-32"
+            />
+            <span>
+              Range - The Stand's maximum effective distance from the User.
+              <br />
+              High Range - Lovers, Harvest, Highway Star
+              <br />
+              Low Range - Anubis, Cheap Trick, Diver Down
+            </span>
           </li>
-          <li>
-            Durability - The Stand's resistance & manifestation duration.
-            High Durability - Strength, Notorious B.I.G, 20th Century Boy
-            Low Durability - Purple Haze, King Crimson, Tubular Bells
+          <li className="flex items-start gap-4">
+            <img
+              src="/character_creation/durability.webp"
+              alt="A heavily armored stand bracing itself"
+              className="w-24 shrink-0 border-4 border-black sm:w-32"
+            />
+            <span>
+              Durability - The Stand's resistance & manifestation duration.
+              <br />
+              High Durability - Strength, Notorious B.I.G, 20th Century Boy
+              <br />
+              Low Durability - Purple Haze, King Crimson, Tubular Bells
+            </span>
           </li>
-          <li>Precision - The Stand's accuracy & ability focus.
+          <li className="flex items-start gap-4">
+            <img
+              src="/character_creation/precision.webp"
+              alt="Emerald shards striking a bright point"
+              className="w-24 shrink-0 border-4 border-black sm:w-32"
+            />
+            <span>
+              Precision - The Stand's accuracy & ability focus.
+              <br />
               High Precision - Emperor, Moody Blues, Awaking III Leaves
+              <br />
               Low Precision - Mandom, Sheer Heart Attack, Wonder Of U
+            </span>
           </li>
-          <li>
-            Learning - The Stand's hidden potential & ability flexibility, can be burnt.
-            High Learning - Tusk Act 1, Gold Experience, Stone Free
-            Low Learning - Tusk Act 3, Hermit Purple, Rolling Stones
+          <li className="flex items-start gap-4">
+            <img
+              src="/character_creation/learning.webp"
+              alt="A silhouette moving through a glowing grid"
+              className="w-24 shrink-0 border-4 border-black sm:w-32"
+            />
+            <span>
+              Learning - The Stand's hidden potential & ability flexibility, can be burnt.
+              <br />
+              High Learning - Tusk Act 1, Gold Experience, Stone Free
+              <br />
+              Low Learning - Tusk Act 3, Hermit Purple, Rolling Stones
+            </span>
           </li>
         </ul>
         <p>
@@ -177,93 +295,164 @@ export default function CharacterCreation() {
           Ø/E/D/C/B/A/∞ = 0/1/2/3/4/5/15 Ranks.
         </p>
       </div>
-      <h3 id="rank-burns" className="mt-12 scroll-mt-4 border-t border-fg/18 pt-4 text-xl font-medium max-md:mt-10">Rank Burns</h3>
-      <p>
+      <h3 id="rank-burns" className="mt-12 scroll-mt-4 border-t border-fg/18 pt-4 text-center text-xl font-medium underline max-md:mt-10">Rank Burns</h3>
+      <p className="!mb-0">
         The Luck & Learning Ranks are a consumable resource for boons.
-        Luck burns are usually temporary, restored after the session ends.
-        Learning burns are a mix of permanent and temporary reductions.
-        Permanent Rank Burns end at 0 Ranks, a grade of Ø preventing more perma-burns.
-        Temporary Rank Burns use the original rank, rather than the reduced one.
+        <br />
+        Luck burns are usually <span className="underline">temporary</span>, restored after the session ends.
+        <br />
+        <span className="underline">Learning</span> burns are a mix of <span className="underline">permanent and temporary</span> reductions.
+        <br />
+        Permanent Rank Burns end at 0 Ranks, a grade of <span className="underline">Ø</span> preventing more perma-burns.
+        <br />
+        <span className="underline">Temporary</span> Rank Burns use the <span className="underline">original</span> rank, rather than the reduced one.
+        <br />
         Even after perma-burning from an A to a Ø, those 5 ranks still exist for temp burns.
-
-        Adapt is exclusive to Stand-Users, all other Learning uses are universal.
-        If a Learning Burn is permanent, add Advantages = Ranks Burnt to its Intro Scene.
       </p>
-      <h3 id="luckBurn">Luck Burn</h3>
-      <p>
-        Feint (-1 Temp) - Edit your Action/Reaction after hearing the enemy's, pre-roll.
-        Instead of going for the left hook, I'll read their block and trip instead…
-        Fudge (-2 Temp) - Add a free Advantage, pre-roll.
-        Fingers crossed. Cannot go over the total Advantage max of +3.
-        Flashback (-3 Temp) - The Narrator "forgot" a detail you choose and retcons it in.
-        Maybe there were bullets in the gun... Maybe you did have a trap buried…
-        Mulligan (-4 Temp) - Add a free Advantage, post-roll.
-        A little spice when nobody's looking… Advantage max of +3 still applies.
-        Persist (-2 Perm) - Try another Action/Reaction after a failed one post-roll, as if it tied.
-        Consequences of the initial fumble may change the scenario for the worse, but no hit.
+      <p className="!mb-0 mt-5">
+        Adapt is exclusive to Stand-Users, all other Learning uses are <span className="underline">universal</span>.
+        <br />
+        If a <span className="underline">Learning Burn</span> is <span className="underline">permanent</span>, add Advantages = Ranks Burnt to its Intro Scene.
+      </p>
+      <h4 id="luckBurn" className="mt-5 scroll-mt-24 text-base font-normal italic">Luck Burn</h4>
+      <p className="!mb-0">
+        Feint (-1 Temp) - <span className="underline">Edit your Action/Reaction after hearing the enemy&apos;s</span>, <span className="underline">pre-roll</span>.
+        <br />
+        <span className="italic">Instead of going for the left hook, I&apos;ll read their block and trip instead…</span>
+        <br />
+        Fudge (-2 Temp) - Add a free <span className="underline">Advantage</span>, <span className="underline">pre-roll</span>.
+        <br />
+        <span className="italic">Fingers crossed. Cannot go over the total Advantage max of +3.</span>
+        <br />
+        Flashback (-3 Temp) - The Narrator &quot;<span className="underline">forgot</span>&quot; a detail you choose and retcons it in.
+        <br />
+        <span className="italic">Maybe there <span className="underline">were</span> bullets in the gun... Maybe you <span className="underline">did</span> have a trap buried…</span>
+        <br />
+        Mulligan (-4 Temp) - Add a free <span className="underline">Advantage</span>, <span className="underline">post-roll</span>.
+        <br />
+        <span className="italic">A little spice when nobody&apos;s looking… Advantage max of +3 still applies.</span>
+        <br />
+        Persist (-2 Perm) - Try another Action/Reaction after a failed one <span className="underline">post-roll</span>, <span className="underline">as if it tied</span>.
+        <br />
+        <span className="italic">Consequences of the initial fumble may change the scenario for the worse, but no hit.</span>
+        <br />
         Gambit (1/2) - Luck Cost of anything = 0 if successful.
-        See prior section on Gambits for more details
+        <br />
+        See prior section on <Link to="/mechanics#gambits" className="text-link-blue underline">Gambits</Link> for more details
       </p>
-      <p>
-        Learning Burn
-        Loophole (-1 Perm) - Unlocks a new aspect of the main ability, adding a new line.
-        These are rules or clauses added to existing abilities, answering niche "what-ifs".
-        e.g. Crazy Diamond can decide the piece that attracts during reconstruction.
-        Improvisation (-2 Perm) - The user creates a minor Ability or Property.
-        e.g. Magician Red's life-sensing fire or Star Finger.
-        Invention (-3 Perm) - The user develops a major Ability.
-        e.g. Gold Experience's Life Shot or Organ Transplant.
-        Evolution (-4 Perm) - The user creates a new mode or form.
-        e.g. Go Beyond or Heavy Weather.
-        Adaptive ___ (-X+2 Temp) - Any of the above, but it goes away after the session ends.
-        Stand Users only. An Adaptive Invention would cost 5 Temp instead of 3 Permanent.
+      <h4 id="learningBurn" className="mt-5 scroll-mt-24 text-base font-normal italic">Learning Burn</h4>
+      <p className="!mb-0">
+        Loophole (-1 Perm) - Unlocks a new aspect of the main ability, adding a <span className="underline">new line</span>.
+        <br />
+        <span className="italic">These are rules or clauses added to existing abilities, answering niche &quot;what-ifs&quot;.</span>
+        <br />
+        <span className="italic">e.g. Crazy Diamond can decide the piece that attracts during reconstruction.</span>
+        <br />
+        Improvisation (-2 Perm) - The user creates a <span className="underline">minor</span> Ability or Property.
+        <br />
+        <span className="italic">e.g. Magician Red&apos;s life-sensing fire or Star Finger.</span>
+        <br />
+        Invention (-3 Perm) - The user develops a <span className="underline">major</span> Ability.
+        <br />
+        <span className="italic">e.g. Gold Experience&apos;s Life Shot or Organ Transplant.</span>
+        <br />
+        Evolution (-4 Perm) - The user creates a <span className="underline">new mode or form</span>.
+        <br />
+        <span className="italic">e.g. Go Beyond or Heavy Weather.</span>
+        <br />
+        Adaptive ___ (-X+2 Temp) - <span className="underline">Any of the above</span>, but it goes away after the session ends.
+        <br />
+        <span className="underline">Stand Users only. An Adaptive Invention would cost 5 Temp instead of 3 Permanent.</span>
       </p>
-      <h3 id="range-learning-ranks" className="mt-12 scroll-mt-4 border-t border-fg/18 pt-4 text-xl font-medium max-md:mt-10">Range/Learning Ranks</h3>
-      <ul>
-        <li>E: 1 Rank ~ 2 Meters or below</li>
-        <li>D: 2 Ranks ~ 6M</li>
-        <li>C: 3 Ranks ~ 15 M</li>
-        <li>B: 4 Ranks ~ 45 M</li>
-        <li>A: 5 Ranks ~ 100 M or above</li>
-        <li>Ø: 0 Ranks ~ 0 M</li>
-        <li>∞: 15 Ranks/Infinite Ranks ~ No Maximum Range Limit
-            Tiles are 2 meters each. 10 meters = 5 Tiles, while Movement is ~8-12 Tiles.
-        </li>
-      </ul>
-      <h3 id="properties" className="mt-12 scroll-mt-4 border-t border-fg/18 pt-4 text-xl font-medium max-md:mt-10">Properties</h3>
-      <p>
-        Some Stands have unique physiologies or affinities, neither ability nor type. 
+      <h3 id="range-learning-ranks" className="mt-12 scroll-mt-4 border-t border-fg/18 pt-4 text-center text-xl font-medium underline max-md:mt-10">Range/Learning Ranks</h3>
+      <div>
+        <img
+          src="/character_creation/range_learning_ranks.webp"
+          alt="A stand stat radar chart marked with power, speed, range, durability, precision, and potential"
+          className="mx-auto mb-4 block w-40 border-4 border-black md:float-right md:mx-0 md:mb-2 md:ml-4 md:w-48"
+        />
+        <p className="!mb-0">
+          E: 1 Rank ~ 2 Meters or below
+          <br />
+          D: 2 Ranks ~ 6M
+          <br />
+          C: 3 Ranks ~ 15 M
+          <br />
+          B: 4 Ranks ~ 45 M
+          <br />
+          A: 5 Ranks ~ 100 M or above
+          <br />
+          <span className="underline">Ø</span>: 0 Ranks ~ 0 M
+          <br />
+          <span className="underline">∞: 15 Ranks/Infinite Ranks ~ No Maximum Range Limit</span>
+          <br />
+          Tiles are 2 meters each. 10 meters = 5 Tiles, while Movement is ~8-12 Tiles.
+        </p>
+        <div className="clear-both" />
+      </div>
+      <h3 id="properties" className="mt-12 scroll-mt-4 border-t border-fg/18 pt-4 text-center text-xl font-medium underline max-md:mt-10">Properties</h3>
+      <p className="!mb-0">
+        Some Stands have unique <span className="underline">physiologies or affinities</span>, neither ability nor type.
+        <br />
         These Properties open the door to otherwise unrealistic actions.
+        <br />
         They typically cost 1 - 3 points.
       </p>
-      <p>
-        Property Costs
-        1 Point - An unrelated gift or attribute.
-        e.g. Highway Star's scent tracking, Dark Blue Moon's swimming.
-        2 Points - Supports the main Ability.
-        e.g. Love Deluxe's growth, Silver Chariot's armor shed, Aerosmith's radar.
-        3 Points - Hallmark attribute, strong synergy.
-        e.g. Justice's fog form, Hierophant Green's barriers.
-
-      </p>
-      <h3 id="abilities" className="mt-12 scroll-mt-4 border-t border-fg/18 pt-4 text-xl font-medium max-md:mt-10">Abilities</h3>
-      <p>
-        Stands have a unique Ability, which bends reality to its will.
-        An ideal Ability is esoteric, being very versatile or hyperspecific.
-        Abilities are closer to laws than special attacks.
-        They can't be resisted with mere force or willpower.
-        Most Stands cannot even be approached safely before solving their power's mystery.
-
-        Pricing is based on flexibility & power, which is up to Narrator discretion.
-        Activation requirements, limits, and drawbacks will lower an Ability's cost.
-        Users intuitively know in a high-powered Stand/Ability, equal flaws must exist.
-        Some Abilities/Properties are actively detrimental, adding extra points instead.
-
-        Player Stands should be limited to 6 Point abilities & below.
-        If multiple Abilities/Properties exist, limit the sum to ~8 points.
-        This limit doesn't apply to anything gained from Learning Burn.
-        Non-Stand Sources have a broader ability cap (5 single/10 total)
-      </p>
+      <div className="mt-4">
+        <p className="!mb-0 text-right italic underline">Property Costs</p>
+        <p className="!mb-0 text-right">1 Point - An unrelated gift or attribute.</p>
+        <p className="!mb-0 text-center italic">e.g. Highway Star&apos;s scent tracking, Dark Blue Moon&apos;s swimming.</p>
+        <p className="!mb-0 text-right">2 Points - Supports the main Ability.</p>
+        <p className="!mb-0 text-center italic">e.g. Love Deluxe&apos;s growth, Silver Chariot&apos;s armor shed, Aerosmith&apos;s radar.</p>
+        <p className="!mb-0 text-right">3 Points - Hallmark attribute, strong synergy.</p>
+        <p className="!mb-0 text-center italic">e.g. Justice&apos;s fog form, Hierophant Green&apos;s barriers.</p>
+      </div>
+      <h3 id="abilities" className="mt-12 scroll-mt-4 border-t border-fg/18 pt-4 text-center text-xl font-medium underline max-md:mt-10">Abilities</h3>
+      <div>
+        <img
+          src="/character_creation/abilities.webp"
+          alt="A cluster of stands, including a white-armored figure and a purple creature"
+          className="mb-4 block w-full max-w-sm border-4 border-black lg:float-right lg:mb-3 lg:ml-4 lg:w-72 lg:max-w-none"
+        />
+        <p className="!mb-0">
+          Stands have a unique <span className="underline">Ability</span>, which bends reality to its will.
+          <br />
+          An ideal Ability is esoteric, being very <span className="underline">versatile or hyperspecific</span>.
+          <br />
+          Abilities are closer to <span className="underline">laws</span> than special attacks.
+          <br />
+          They can&apos;t be resisted with mere force or willpower.
+          <br />
+          Most Stands cannot even be <span className="underline">approached</span> safely before solving their power&apos;s mystery.
+        </p>
+        <div className="clear-both" />
+      </div>
+      <div className="mt-5">
+        <img
+          src="/character_creation/abilities_2.webp"
+          alt="A green-haired man kneeling in a forest beside a tiny house"
+          className="mb-4 block w-44 border-4 border-black lg:float-left lg:mb-3 lg:mr-4 lg:w-52"
+        />
+        <p className="!mb-0">
+          Pricing is based on flexibility & power, which is up to Narrator discretion.
+          <br />
+          <span className="underline">Activation requirements, limits, and drawbacks</span> will lower an Ability&apos;s cost.
+          <br />
+          Users <span className="italic">intuitively know</span> in a high-powered Stand/Ability, equal flaws must exist.
+          <br />
+          Some Abilities/Properties are actively detrimental, <span className="italic underline">adding extra points</span> instead.
+        </p>
+        <p className="!mb-0 mt-5">
+          Player Stands should be limited to 6 Point abilities & <span className="underline">below</span>.
+          <br />
+          If multiple Abilities/Properties exist, limit the sum to ~8 points.
+          <br />
+          This limit doesn&apos;t apply to anything gained from <Link to="#learningBurn" className="text-link-blue underline">Learning Burn</Link>.
+          <br />
+          Non-Stand Sources have a broader ability cap (5 single/10 total)
+        </p>
+        <div className="clear-both" />
+      </div>
       <p>Ability Costs</p>
       <ul>
         <li>
