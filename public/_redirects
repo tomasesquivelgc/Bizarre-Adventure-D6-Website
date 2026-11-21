@@ -1,0 +1,3 @@
+# SPA fallback for paths that aren't pre-rendered (e.g. future client-only tools).
+# Pre-rendered routes are served as their own HTML files first.
+/*    /__spa-fallback.html   200

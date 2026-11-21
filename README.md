@@ -28,10 +28,12 @@ Community and source material:
 
 ## Tech stack
 
-- [React Router](https://reactrouter.com/) (Framework Mode)
+- [React Router](https://reactrouter.com/) (Framework Mode, static / SPA)
 - React 19 + TypeScript
 - Tailwind CSS v4
 - Vite
+
+The site is a **static build**: pages are pre-rendered at build time into `build/client`. No Node server is required at runtime. A future in-browser character creator (localStorage) can stay static.
 
 ## Getting started
 
@@ -45,10 +47,19 @@ App runs at `http://localhost:5173`.
 ### Other scripts
 
 ```bash
-npm run build      # production build
-npm start          # serve the production build
+npm run build      # production static build → build/client
+npm start          # preview the static build locally
 npm run typecheck  # generate route types + TypeScript check
 ```
+
+## Deploy (static host)
+
+Example for [Render](https://render.com/) **Static Site**:
+
+- **Build Command:** `npm install && npm run build`
+- **Publish Directory:** `build/client`
+
+`public/_redirects` sends unknown paths to `__spa-fallback.html` so client-only routes still work on refresh.
 
 ## Project layout
 

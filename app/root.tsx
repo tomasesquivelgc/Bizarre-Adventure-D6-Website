@@ -45,6 +45,14 @@ export function Layout({ children }: { children: React.ReactNode }) {
   );
 }
 
+export function HydrateFallback() {
+  return (
+    <main className="mx-auto flex w-full flex-1 items-center justify-center bg-bg p-8 md:w-gr-big">
+      <p className="text-muted">Loading…</p>
+    </main>
+  );
+}
+
 export default function App() {
   return <Outlet />;
 }
